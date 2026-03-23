@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Rajdhani', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Brand palette */
+  --clr-navy:      #0f1f5c;
+  --clr-navy-dark: #090f2e;
+  --clr-navy-mid:  #1a2f7a;
+  --clr-saffron:   #ff7d1a;
+  --clr-saffron-lt:#ffb870;
+  --clr-jade:      #138a3f;
+  --clr-jade-lt:   #22c55e;
+  --clr-white:     #ffffff;
+  --clr-off-white: #f7f8fc;
+  --clr-muted:     #6b7a9e;
+  --clr-border:    #dde2f0;
+  --clr-card:      #ffffff;
+  --clr-surface:   #f0f3fc;
+
+  /* Tricolor accent stripe */
+  --stripe-saffron: #FF9933;
+  --stripe-white:   #FFFFFF;
+  --stripe-green:   #138808;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-off-white);
+  color: var(--clr-navy);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Tricolor top bar */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--stripe-saffron) 33.3%,
+    var(--stripe-white) 33.3% 66.6%,
+    var(--stripe-green) 66.6%
+  );
+  z-index: 9999;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--clr-surface); }
+::-webkit-scrollbar-thumb { background: #b0bad8; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--clr-muted); }
+
+/* ── Focus ring ── */
+*:focus-visible {
+  outline: 2px solid var(--clr-saffron);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Skeleton shimmer ── */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--clr-border) 25%,
+    #e8ecf7 50%,
+    var(--clr-border) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Prose markdown inside chat ── */
+.prose-chat h1, .prose-chat h2, .prose-chat h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--clr-navy);
+  margin-bottom: 0.35em;
+  margin-top: 0.6em;
+  line-height: 1.25;
+}
+.prose-chat h1 { font-size: 1.15rem; }
+.prose-chat h2 { font-size: 1.05rem; }
+.prose-chat h3 { font-size: 0.95rem; }
+
+.prose-chat p { margin-bottom: 0.5em; line-height: 1.65; }
+
+.prose-chat ul, .prose-chat ol {
+  margin: 0.4em 0 0.6em 1.2em;
+  line-height: 1.7;
+}
+.prose-chat ul { list-style-type: disc; }
+.prose-chat ol { list-style-type: decimal; }
+.prose-chat li { margin-bottom: 0.15em; }
+
+.prose-chat strong {
+  font-weight: 600;
+  color: var(--clr-navy);
+}
+
+.prose-chat a {
+  color: var(--clr-saffron);
+  text-decoration: underline;
+  word-break: break-all;
+}
+.prose-chat a:hover { color: #d96000; }
+
+.prose-chat code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--clr-surface);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  color: var(--clr-navy-mid);
+}
+
+.prose-chat blockquote {
+  border-left: 3px solid var(--clr-saffron);
+  padding-left: 0.75em;
+  color: var(--clr-muted);
+  font-style: italic;
+  margin: 0.5em 0;
+}
+
+/* ── Card hover ── */
+.service-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(15, 31, 92, 0.12);
+}

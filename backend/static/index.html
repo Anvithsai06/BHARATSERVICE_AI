@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BharatService – AI Government Service Finder | India</title>
+  <meta name="description" content="Find any Indian government service instantly. AI-powered search, 150+ official portals, step-by-step guidance for every citizen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Noto+Sans+Devanagari:wght@500;700&family=Noto+Sans+Telugu:wght@500;700&family=Noto+Sans+Kannada:wght@500;700&family=Noto+Sans+Tamil:wght@500;700&display=swap" rel="stylesheet" />
+  
+  <!-- Three.js for 3D effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <style>
+    :root {
+      --navy:       #0f1f5c;
+      --navy-dark:  #090f2e;
+      --navy-mid:   #1a2f7a;
+      --navy-light: #2d4a9e;
+      --saffron:    #ff7d1a;
+      --saffron-lt: #ffb870;
+      --saffron-glow: rgba(255, 125, 26, 0.4);
+      --jade:       #138a3f;
+      --jade-lt:    #22c55e;
+      --jade-glow:  rgba(34, 197, 94, 0.3);
+      --off-white:  #f7f8fc;
+      --surface:    #f0f3fc;
+      --surface-glass: rgba(255, 255, 255, 0.08);
+      --border:     #dde2f0;
+      --muted:      #6b7a9e;
+      --white:      #ffffff;
+      --shadow-soft: 0 4px 20px rgba(15, 31, 92, 0.08);
+      --shadow-medium: 0 8px 40px rgba(15, 31, 92, 0.12);
+      --shadow-heavy: 0 20px 60px rgba(15, 31, 92, 0.2);
+      --glow-saffron: 0 0 30px rgba(255, 125, 26, 0.3);
+      --glow-navy: 0 0 40px rgba(15, 31, 92, 0.2);
+      --font-disp:  'Rajdhani', 'Noto Sans Devanagari', sans-serif;
+      --font-body:  'DM Sans', sans-serif;
+      --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--navy-dark);
+      color: var(--navy);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    body::before {
+      content: '';
+      position: fixed; top: 0; left: 0; right: 0; height: 4px; z-index: 9999;
+      background: linear-gradient(90deg, #FF9933 33.3%, #fff 33.3% 66.6%, #138808 66.6%);
+      background-size: 200% 100%;
+      animation: tricolorFlow 8s linear infinite;
+    }
+    @keyframes tricolorFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--navy-dark); }
+    ::-webkit-scrollbar-thumb { 
+      background: linear-gradient(180deg, var(--saffron), var(--jade)); 
+      border-radius: 99px;
+      border: 2px solid var(--navy-dark);
+    }
+    ::-webkit-scrollbar-thumb:hover { 
+      background: linear-gradient(180deg, var(--saffron-lt), var(--jade-lt)); 
+    }
+    #hero-canvas {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 0; pointer-events: none;
+    }
+    header {
+      position: fixed; top: 4px; left: 0; right: 0; z-index: 1000;
+      background: rgba(255, 255, 255, 0.85); 
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(15, 31, 92, 0.1);
+      transition: all var(--transition-smooth);
+    }
+    header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 40px rgba(15, 31, 92, 0.15);
+    }
+    .header-inner {
+      max-width: 1400px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; height: 70px;
+    }
+    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; perspective: 1000px; }
+    .logo-badge {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-disp); color: #fff; font-size: 20px; font-weight: 700;
+      position: relative; box-shadow: 0 4px 15px rgba(15, 31, 92, 0.3), var(--glow-saffron);
+      transform-style: preserve-3d; transition: transform var(--transition-spring);
+    }
+    .logo-badge::after {
+      content: ''; position: absolute; bottom: -4px; right: -4px;
+      width: 16px; height: 16px; background: var(--saffron); border-radius: 50%;
+      border: 3px solid #fff; box-shadow: 0 2px 8px rgba(255, 125, 26, 0.4);
+    }
+    .logo-badge:hover { transform: rotateY(10deg) rotateX(-5deg) scale(1.05); }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-name { 
+      font-family: var(--font-disp); font-size: 22px; font-weight: 700; 
+      color: var(--navy); line-height: 1; display: flex; align-items: center; gap: 4px;
+    }
+    .logo-name .bharat-text {
+      color: var(--saffron); display: inline-block; min-width: 60px;
+      transition: all var(--transition-smooth);
+    }
+    .logo-name .bharat-text.changing { animation: textFlip 0.6s ease-in-out; }
+    @keyframes textFlip {
+      0% { transform: rotateX(0deg); opacity: 1; }
+      50% { transform: rotateX(90deg); opacity: 0; }
+      100% { transform: rotateX(0deg); opacity: 1; }
+    }
+    .logo-sub { 
+      font-size: 11px; color: var(--muted); text-transform: uppercase; 
+      letter-spacing: 0.08em; margin-top: 3px; font-weight: 500;
+    }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a { 
+      font-size: 14px; font-weight: 500; color: var(--navy); text-decoration: none; 
+      transition: all var(--transition-fast); position: relative; padding: 8px 0;
+    }
+    nav a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--saffron), var(--jade));
+      transition: width var(--transition-fast); border-radius: 2px;
+    }
+    nav a:hover { color: var(--saffron); }
+    nav a:hover::after { width: 100%; }
+    .btn-chat {
+      display: flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: #fff; padding: 12px 22px; border-radius: 12px; border: none; cursor: pointer;
+      font-size: 14px; font-weight: 600; font-family: var(--font-body);
+      text-decoration: none; transition: all var(--transition-fast);
+      box-shadow: 0 4px 15px rgba(15, 31, 92, 0.2); position: relative; overflow: hidden;
+    }
+    .btn-chat::before {
+      content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-chat:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(15, 31, 92, 0.3), var(--glow-saffron); }
+    .btn-chat:hover::before { left: 100%; }
+    .stats-bar {
+      position: fixed; top: 74px; left: 0; right: 0;
+      background: rgba(240, 243, 252, 0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border); padding: 0 24px; z-index: 999;
+      transition: transform var(--transition-smooth);
+    }
+    .stats-bar.hidden { transform: translateY(-100%); }
+    .stats-bar-inner {
+      max-width: 1400px; margin: 0 auto; display: flex; align-items: center;
+      justify-content: space-between; height: 42px; font-size: 12px; color: var(--muted);
+      overflow-x: auto; gap: 24px; white-space: nowrap;
+    }
+    .stats-pills { display: flex; align-items: center; gap: 20px; }
+    .stat-pill { 
+      display: flex; align-items: center; gap: 8px; padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.6); border-radius: 99px; border: 1px solid var(--border);
+      transition: all var(--transition-fast);
+    }
+    .stat-pill:hover { background: #fff; box-shadow: var(--shadow-soft); transform: translateY(-1px); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dot-green { 
+      background: linear-gradient(135deg, #4ade80, #22c55e); 
+      box-shadow: 0 0 8px rgba(74, 222, 128, 0.6); animation: pulse 2s infinite; 
+    }
+    .dot-amber { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+    @keyframes pulse { 
+      0%, 100% { opacity: 1; transform: scale(1); } 
+      50% { opacity: 0.7; transform: scale(1.1); } 
+    }
+    .counter { font-weight: 700; color: var(--navy); font-family: var(--font-disp); font-size: 14px; }
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      justify-content: center; overflow: hidden;
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+      padding: 140px 24px 100px;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: 
+        radial-gradient(ellipse at 20% 80%, rgba(255, 125, 26, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(15, 31, 92, 0.3) 0%, transparent 70%);
+      pointer-events: none; z-index: 1;
+    }
+    .hero-grid {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      transform: perspective(1000px) rotateX(60deg) translateY(-100px) scale(2);
+      opacity: 0.5; animation: gridMove 20s linear infinite; z-index: 2;
+    }
+    @keyframes gridMove {
+      0% { transform: perspective(1000px) rotateX(60deg) translateY(0) scale(2); }
+      100% { transform: perspective(1000px) rotateX(60deg) translateY(60px) scale(2); }
+    }
+    .hero-inner { 
+      max-width: 900px; margin: 0 auto; text-align: center; position: relative;
+      z-index: 10; transform-style: preserve-3d; perspective: 1000px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px); border-radius: 999px; padding: 8px 20px; margin-bottom: 32px;
+      font-size: 13px; color: rgba(255, 255, 255, 0.95); font-weight: 500; letter-spacing: 0.03em;
+      animation: fadeInUp 0.8s ease-out; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .hero-badge-dot { 
+      width: 10px; height: 10px; 
+      background: linear-gradient(135deg, var(--saffron-lt), var(--saffron)); 
+      border-radius: 50%; box-shadow: 0 0 12px var(--saffron); animation: pulse 2s infinite;
+    }
+    .hero-title {
+      font-family: var(--font-disp); font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 24px;
+      letter-spacing: -0.02em; animation: fadeInUp 0.8s ease-out 0.1s both;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-lt) 50%, #ffb870 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      position: relative; display: inline-block;
+    }
+    .hero-title .bharat-rotate {
+      display: inline-block; min-width: 120px;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hero-title .bharat-rotate.changing { transform: rotateX(90deg); opacity: 0; }
+    .hero-sub {
+      font-size: 18px; color: rgba(255, 255, 255, 0.75); margin-bottom: 48px;
+      line-height: 1.7; max-width: 600px; margin-left: auto; margin-right: auto;
+      animation: fadeInUp 0.8s ease-out 0.2s both; font-weight: 400;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .search-wrap { 
+      max-width: 720px; margin: 0 auto 36px; position: relative;
+      animation: fadeInUp 0.8s ease-out 0.3s both; transform-style: preserve-3d;
+    }
+    .search-box {
+      display: flex; align-items: center;
+      background: rgba(255, 255, 255, 0.95); border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      transition: all var(--transition-smooth); position: relative; overflow: hidden;
+    }
+    .search-box::before {
+      content: ''; position: absolute; inset: -2px;
+      background: linear-gradient(135deg, var(--saffron), var(--jade), var(--navy));
+      border-radius: 22px; z-index: -1; opacity: 0; transition: opacity var(--transition-smooth);
+    }
+    .search-box:focus-within {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), var(--glow-saffron);
+    }
+    .search-box:focus-within::before { opacity: 0.5; }
+    .search-icon { 
+      margin: 0 6px 0 22px; color: var(--muted); flex-shrink: 0; font-size: 20px;
+      animation: searchPulse 2s infinite;
+    }
+    @keyframes searchPulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+    .search-input {
+      flex: 1; border: none; outline: none; background: transparent;
+      font-family: var(--font-body); font-size: 17px; color: var(--navy);
+      padding: 22px 16px; min-width: 0;
+    }
+    .search-input::placeholder { color: #9ca3af; transition: all var(--transition-fast); }
+    .search-input:focus::placeholder { opacity: 0.5; transform: translateX(10px); }
+    .search-btn {
+      margin: 8px; padding: 14px 28px; 
+      background: linear-gradient(135deg, var(--saffron) 0%, #e96d0a 100%);
+      color: #fff; border: none; border-radius: 14px; font-size: 15px; font-weight: 700;
+      font-family: var(--font-body); cursor: pointer; transition: all var(--transition-fast);
+      display: flex; align-items: center; gap: 8px; white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(255, 125, 26, 0.3); position: relative; overflow: hidden;
+    }
+    .search-btn::after {
+      content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0;
+      background: rgba(255, 255, 255, 0.3); border-radius: 50%;
+      transform: translate(-50%, -50%); transition: width 0.6s, height 0.6s;
+    }
+    .search-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255, 125, 26, 0.4); }
+    .search-btn:active::after { width: 300px; height: 300px; }
+    .search-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .suggestions {
+      position: absolute; top: calc(100% + 12px); left: 0; right: 0;
+      background: rgba(255, 255, 255, 0.98); border-radius: 16px; 
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border); overflow: hidden; z-index: 100; display: none;
+      backdrop-filter: blur(20px); transform-origin: top center;
+      animation: dropdownIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes dropdownIn {
+      from { opacity: 0; transform: translateY(-10px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .suggestions.open { display: block; }
+    .sugg-header { 
+      padding: 12px 20px; font-size: 11px; font-weight: 700; color: var(--muted); 
+      text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .sugg-item {
+      display: flex; align-items: center; gap: 14px; padding: 14px 20px;
+      font-size: 15px; color: var(--navy); cursor: pointer; transition: all var(--transition-fast);
+      text-align: left; width: 100%; border: none; background: none; font-family: var(--font-body);
+    }
+    .sugg-item:hover { background: linear-gradient(90deg, var(--surface), transparent); padding-left: 24px; }
+    .sugg-item-icon { font-size: 18px; transition: transform var(--transition-fast); }
+    .sugg-item:hover .sugg-item-icon { transform: scale(1.2); }
+    .hero-pills { 
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+    .hero-pill {
+      background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px); color: rgba(255, 255, 255, 0.9); 
+      font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 999px;
+      transition: all var(--transition-fast); cursor: pointer;
+    }
+    .hero-pill:hover {
+      background: rgba(255, 255, 255, 0.2); border-color: var(--saffron);
+      transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255, 125, 26, 0.2);
+    }
+    .results-section { 
+      max-width: 1400px; margin: 0 auto; padding: 48px 24px; display: none;
+      background: var(--off-white); position: relative;
+    }
+    .results-section.visible { display: block; animation: fadeIn 0.5s ease-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .results-header { 
+      display: flex; align-items: center; justify-content: space-between; 
+      margin-bottom: 32px; padding: 0 8px;
+    }
+    .results-title { 
+      font-family: var(--font-disp); font-size: 28px; font-weight: 700; 
+      color: var(--navy); position: relative;
+    }
+    .results-title::after {
+      content: ''; position: absolute; bottom: -8px; left: 0; width: 60px; height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--jade)); border-radius: 2px;
+    }
+    .results-sub { font-size: 14px; color: var(--muted); margin-top: 16px; }
+    .clear-btn {
+      display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); 
+      background: rgba(255, 255, 255, 0.8); border: 1px solid var(--border); cursor: pointer;
+      font-family: var(--font-body); transition: all var(--transition-fast);
+      padding: 10px 18px; border-radius: 10px; backdrop-filter: blur(10px);
+    }
+    .clear-btn:hover { color: var(--navy); background: #fff; box-shadow: var(--shadow-soft); transform: translateY(-1px); }
+    .results-grid { 
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); 
+      gap: 24px; perspective: 1000px;
+    }
+    .service-card {
+      background: rgba(255, 255, 255, 0.95); border: 1px solid var(--border); border-radius: 20px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: all var(--transition-smooth); transform-style: preserve-3d;
+      position: relative; box-shadow: var(--shadow-soft);
+    }
+    .service-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255, 125, 26, 0.05), transparent);
+      opacity: 0; transition: opacity var(--transition-smooth); pointer-events: none;
+    }
+    .service-card:hover { 
+      transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+      box-shadow: 0 25px 50px rgba(15, 31, 92, 0.15), 0 0 0 1px rgba(255, 125, 26, 0.2);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .card-body { padding: 24px 24px 16px; flex: 1; position: relative; z-index: 1; }
+    .card-name { 
+      font-family: var(--font-disp); font-size: 17px; font-weight: 600; 
+      color: var(--navy); margin-bottom: 12px; line-height: 1.4;
+    }
+    .card-cat {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; 
+      padding: 5px 12px; border-radius: 99px; margin-bottom: 12px;
+      transition: all var(--transition-fast);
+    }
+    .service-card:hover .card-cat { transform: scale(1.05); }
+    .cat-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .card-desc { 
+      font-size: 14px; color: #6b7280; line-height: 1.7; 
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; 
+      overflow: hidden; margin-bottom: 16px;
+    }
+    .card-meta { 
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      padding-top: 16px; border-top: 1px solid var(--border);
+    }
+    .meta-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+    .card-actions { 
+      display: flex; align-items: center; gap: 10px; padding: 16px 24px 24px;
+      position: relative; z-index: 1;
+    }
+    .btn-portal {
+      flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: #fff; text-decoration: none; font-size: 14px; font-weight: 700; 
+      font-family: var(--font-body); padding: 12px; border-radius: 12px; 
+      transition: all var(--transition-fast); box-shadow: 0 4px 15px rgba(15, 31, 92, 0.2);
+    }
+    .btn-portal:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(15, 31, 92, 0.3); }
+    .btn-ai {
+      display: flex; align-items: center; gap: 6px;
+      background: linear-gradient(135deg, rgba(255, 125, 26, 0.1), rgba(255, 125, 26, 0.05));
+      color: var(--saffron); border: 1px solid rgba(255, 125, 26, 0.3); border-radius: 12px;
+      font-size: 14px; font-weight: 700; font-family: var(--font-body);
+      padding: 12px 16px; cursor: pointer; transition: all var(--transition-fast);
+    }
+    .btn-ai:hover { 
+      background: linear-gradient(135deg, rgba(255, 125, 26, 0.2), rgba(255, 125, 26, 0.1));
+      transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255, 125, 26, 0.2);
+    }
+    .btn-expand {
+      padding: 12px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border);
+      cursor: pointer; color: var(--muted); transition: all var(--transition-fast); font-size: 16px;
+    }
+    .btn-expand:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .card-docs { padding: 0 24px 20px; display: none; animation: slideDown 0.3s ease-out; }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card-docs.open { display: block; }
+    .docs-inner { 
+      background: linear-gradient(135deg, var(--surface), #fff);
+      border-radius: 14px; padding: 18px; border: 1px solid var(--border);
+    }
+    .docs-title { 
+      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; 
+      color: var(--navy); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; 
+    }
+    .doc-item { 
+      display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #4b5563; 
+      margin-bottom: 8px; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .doc-item:last-child { border-bottom: none; margin-bottom: 0; }
+    .doc-num { 
+      width: 20px; height: 20px; 
+      background: linear-gradient(135deg, rgba(255, 125, 26, 0.15), rgba(255, 125, 26, 0.25));
+      color: var(--saffron); font-size: 10px; font-weight: 700; border-radius: 50%; 
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .skeleton { 
+      background: linear-gradient(90deg, var(--border) 25%, #e8ecf7 50%, var(--border) 75%); 
+      background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 8px; 
+    }
+    @keyframes shimmer { 
+      0% { background-position: 200% 0; } 
+      100% { background-position: -200% 0; } 
+    }
+    .categories-section { 
+      max-width: 1400px; margin: 0 auto; padding: 80px 24px;
+      background: var(--off-white); position: relative;
+    }
+    .section-title { 
+      font-family: var(--font-disp); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; 
+      color: var(--navy); margin-bottom: 12px; position: relative; display: inline-block;
+    }
+    .section-title::after {
+      content: ''; position: absolute; bottom: -8px; left: 0; width: 80px; height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--jade)); border-radius: 2px;
+    }
+    .section-sub { font-size: 16px; color: var(--muted); margin-bottom: 40px; margin-top: 20px; }
+    .categories-grid { 
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+      gap: 16px; perspective: 1000px;
+    }
+    .cat-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 12px;
+      padding: 24px 16px; background: rgba(255, 255, 255, 0.9); border: 1px solid var(--border); 
+      border-radius: 20px; cursor: pointer; transition: all var(--transition-spring);
+      text-align: center; font-family: var(--font-body); transform-style: preserve-3d;
+      box-shadow: var(--shadow-soft); position: relative; overflow: hidden;
+    }
+    .cat-btn::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--jade)); transform: scaleX(0);
+      transition: transform var(--transition-smooth);
+    }
+    .cat-btn:hover { 
+      border-color: var(--saffron); 
+      box-shadow: 0 12px 30px rgba(255, 125, 26, 0.15), 0 4px 10px rgba(0, 0, 0, 0.05);
+      transform: translateY(-6px) scale(1.02);
+    }
+    .cat-btn:hover::before { transform: scaleX(1); }
+    .cat-emoji { font-size: 32px; transition: all var(--transition-spring); display: block; }
+    .cat-btn:hover .cat-emoji { transform: scale(1.3) rotate(5deg); }
+    .cat-label { 
+      font-size: 12px; font-weight: 600; color: var(--navy); line-height: 1.4;
+      transition: color var(--transition-fast);
+    }
+    .cat-btn:hover .cat-label { color: var(--saffron); }
+    .how-section { max-width: 1400px; margin: 0 auto; padding: 80px 24px; background: #fff; }
+    .steps-grid { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+      gap: 28px; margin-top: 48px;
+    }
+    .step-card {
+      background: rgba(255, 255, 255, 0.9); border: 1px solid var(--border); border-radius: 24px;
+      padding: 32px 28px; text-align: center; position: relative;
+      transition: all var(--transition-smooth); transform-style: preserve-3d; box-shadow: var(--shadow-soft);
+    }
+    .step-card:hover { box-shadow: var(--shadow-medium); transform: translateY(-8px); }
+    .step-num {
+      position: absolute; top: -12px; left: 24px; 
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border: 2px solid #fff; border-radius: 99px; padding: 4px 14px;
+      font-size: 12px; font-weight: 700; color: #fff; font-family: var(--font-disp);
+      box-shadow: var(--shadow-soft);
+    }
+    .step-icon { 
+      width: 64px; height: 64px; border-radius: 20px; display: flex; align-items: center; 
+      justify-content: center; margin: 8px auto 20px; font-size: 28px;
+      transition: all var(--transition-spring);
+    }
+    .step-card:hover .step-icon { transform: scale(1.1) rotate(5deg); }
+    .step-title { font-family: var(--font-disp); font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .features-section { 
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      padding: 100px 24px; position: relative; overflow: hidden;
+    }
+    .features-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 125, 26, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(34, 197, 94, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .features-inner { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+    .features-grid { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 24px; margin-top: 48px;
+    }
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px); border-radius: 24px; padding: 32px; 
+      transition: all var(--transition-smooth); transform-style: preserve-3d;
+    }
+    .feature-card:hover { 
+      background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 125, 26, 0.3);
+      transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    .feature-icon-wrap { 
+      width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; 
+      justify-content: center; margin-bottom: 20px; font-size: 26px;
+      transition: all var(--transition-spring);
+    }
+    .feature-card:hover .feature-icon-wrap { transform: scale(1.1) rotate(-5deg); }
+    .feature-title { font-family: var(--font-disp); font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .feature-desc { font-size: 14px; color: rgba(255, 255, 255, 0.6); line-height: 1.7; }
+    .features-heading { 
+      font-family: var(--font-disp); font-size: clamp(1.8rem, 4vw, 2.5rem); 
+      font-weight: 700; color: #fff; margin-bottom: 12px;
+    }
+    .features-sub { font-size: 16px; color: rgba(255, 255, 255, 0.6); }
+    .chat-fab {
+      position: fixed; bottom: 28px; right: 28px; z-index: 1000;
+      width: 64px; height: 64px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 30px rgba(15, 31, 92, 0.4), 0 0 0 4px rgba(255, 125, 26, 0.2);
+      font-size: 28px; transition: all var(--transition-spring);
+      animation: fabFloat 3s ease-in-out infinite;
+    }
+    @keyframes fabFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .chat-fab:hover { 
+      transform: scale(1.1);
+      box-shadow: 0 12px 40px rgba(15, 31, 92, 0.5), 0 0 0 6px rgba(255, 125, 26, 0.3), var(--glow-saffron);
+    }
+    .chat-panel {
+      position: fixed; bottom: 0; right: 0; z-index: 1001;
+      width: 100%; max-width: 460px; height: 85vh; max-height: 700px;
+      background: rgba(255, 255, 255, 0.98); border-radius: 28px 28px 0 0; 
+      box-shadow: 0 -8px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      display: flex; flex-direction: column;
+      transform: translateY(110%); transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border: 1px solid var(--border); backdrop-filter: blur(20px);
+    }
+    @media (min-width: 640px) {
+      .chat-panel { bottom: 100px; right: 28px; border-radius: 28px; height: 600px; }
+    }
+    .chat-panel.open { transform: translateY(0); }
+    .chat-header {
+      display: flex; align-items: center; gap: 14px; padding: 20px 24px;
+      border-bottom: 1px solid var(--border); flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(255, 125, 26, 0.05), transparent);
+    }
+    .chat-avatar {
+      width: 46px; height: 46px; background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px;
+      position: relative; flex-shrink: 0; box-shadow: 0 4px 15px rgba(15, 31, 92, 0.2);
+    }
+    .chat-status-dot {
+      position: absolute; bottom: -2px; right: -2px; width: 14px; height: 14px;
+      border-radius: 50%; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .chat-title { font-family: var(--font-disp); font-size: 17px; font-weight: 700; color: var(--navy); }
+    .chat-subtitle { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .chat-actions { margin-left: auto; display: flex; gap: 8px; }
+    .icon-btn {
+      width: 38px; height: 38px; border-radius: 10px; background: var(--surface);
+      border: 1px solid var(--border); cursor: pointer; color: var(--muted); 
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; transition: all var(--transition-fast);
+    }
+    .icon-btn:hover { background: var(--navy); color: #fff; border-color: var(--navy); transform: translateY(-2px); }
+    .chat-messages { 
+      flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; 
+      gap: 16px; scroll-behavior: smooth;
+    }
+    .quick-prompts { padding: 0 20px 16px; flex-shrink: 0; animation: fadeIn 0.3s ease-out; }
+    .qp-label { 
+      font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; 
+      letter-spacing: 0.07em; margin-bottom: 12px; 
+    }
+    .qp-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .qp-btn {
+      font-size: 12px; background: var(--surface); color: var(--navy);
+      border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px;
+      cursor: pointer; transition: all var(--transition-fast); font-family: var(--font-body);
+    }
+    .qp-btn:hover { 
+      background: linear-gradient(135deg, rgba(255, 125, 26, 0.1), rgba(255, 125, 26, 0.05));
+      border-color: var(--saffron); color: var(--saffron); transform: translateY(-1px);
+    }
+    .chat-footer {
+      padding: 16px 20px 20px; border-top: 1px solid var(--border); flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.8);
+    }
+    .chat-input-row {
+      display: flex; align-items: flex-end; gap: 10px; background: var(--surface); 
+      border-radius: 18px; border: 1px solid var(--border); padding: 10px; 
+      transition: all var(--transition-fast);
+    }
+    .chat-input-row:focus-within { border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(255, 125, 26, 0.1); }
+    .chat-textarea {
+      flex: 1; border: none; outline: none; background: transparent; resize: none;
+      font-family: var(--font-body); font-size: 15px; color: var(--navy);
+      padding: 6px 12px; max-height: 100px; min-height: 40px; line-height: 1.5;
+    }
+    .chat-textarea::placeholder { color: #9ca3af; }
+    .send-btn {
+      width: 42px; height: 42px; background: linear-gradient(135deg, var(--saffron), #e96d0a);
+      color: #fff; border: none; border-radius: 14px; cursor: pointer; 
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0; transition: all var(--transition-fast);
+      box-shadow: 0 4px 15px rgba(255, 125, 26, 0.3);
+    }
+    .send-btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(255, 125, 26, 0.4); }
+    .send-btn:disabled { background: #d1d5db; cursor: not-allowed; box-shadow: none; }
+    .chat-disclaimer { text-align: center; font-size: 10px; color: var(--muted); margin-top: 10px; }
+    .msg { display: flex; gap: 10px; animation: messageIn 0.3s ease-out; }
+    @keyframes messageIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .msg.user { justify-content: flex-end; }
+    .msg-avatar { 
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; 
+      justify-content: center; flex-shrink: 0; font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .msg-avatar.ai { background: linear-gradient(135deg, rgba(255, 125, 26, 0.15), rgba(255, 125, 26, 0.25)); }
+    .msg-avatar.user { background: linear-gradient(135deg, rgba(15, 31, 92, 0.1), rgba(15, 31, 92, 0.2)); }
+    .msg-bubble { 
+      max-width: 80%; padding: 14px 18px; border-radius: 18px; font-size: 14px; line-height: 1.7;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .msg-bubble.ai { 
+      background: linear-gradient(135deg, var(--surface), #fff); border: 1px solid var(--border);
+      border-top-left-radius: 4px; color: var(--navy);
+    }
+    .msg-bubble.user { 
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      color: #fff; border-top-right-radius: 4px;
+    }
+    .msg-bubble strong { font-weight: 600; }
+    .msg-bubble a { color: var(--saffron); text-decoration: underline; }
+    .msg-time { font-size: 11px; color: var(--muted); margin-top: 6px; }
+    .typing { display: flex; gap: 6px; align-items: center; padding: 16px 20px; }
+    .typing span { 
+      width: 10px; height: 10px; 
+      background: linear-gradient(135deg, var(--saffron), var(--saffron-lt));
+      border-radius: 50%;
+      animation: bounce 0.9s infinite; 
+    }
+    .typing span:nth-child(2) { animation-delay: 0.15s; }
+    .typing span:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes bounce { 
+      0%, 60%, 100% { transform: translateY(0); } 
+      30% { transform: translateY(-8px); } 
+    }
+    .msg-error { 
+      font-size: 13px; color: #dc2626; 
+      background: linear-gradient(135deg, #fef2f2, #fee2e2);
+      border-radius: 12px; padding: 12px 16px; border: 1px solid #fecaca;
+      box-shadow: 0 2px 10px rgba(220, 38, 38, 0.1);
+    }
+    footer { 
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      color: rgba(255, 255, 255, 0.7); padding: 60px 24px 32px; position: relative; overflow: hidden;
+    }
+    footer::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #FF9933, #fff, #138808); opacity: 0.5;
+    }
+    .footer-inner { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+    .footer-grid { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+      gap: 40px; margin-bottom: 40px;
+    }
+    .footer-brand-name { 
+      font-family: var(--font-disp); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;
+    }
+    .footer-brand-name span { color: var(--saffron); }
+    .footer-desc { font-size: 14px; line-height: 1.8; color: rgba(255, 255, 255, 0.6); }
+    .footer-heading { 
+      color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; 
+      letter-spacing: 0.08em; margin-bottom: 16px;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { 
+      color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 14px; 
+      transition: all var(--transition-fast); display: inline-block;
+    }
+    .footer-links a:hover { color: var(--saffron-lt); transform: translateX(4px); }
+    .footer-note { 
+      font-size: 13px; line-height: 1.8; color: rgba(255, 255, 255, 0.5); padding: 16px;
+      background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .footer-bottom { 
+      border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; 
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-bottom span { font-size: 13px; color: rgba(255, 255, 255, 0.5); }
+    .tricolor-dots { display: flex; gap: 8px; align-items: center; }
+    .tricolor-dots span { width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .empty-state { text-align: center; padding: 80px 24px; }
+    .empty-icon { font-size: 64px; margin-bottom: 24px; animation: float 3s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .empty-title { font-family: var(--font-disp); font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .empty-desc { font-size: 15px; color: var(--muted); max-width: 400px; margin: 0 auto; line-height: 1.7; }
+    .error-note { 
+      display: inline-block; margin-top: 16px; 
+      background: linear-gradient(135deg, #fffbeb, #fef3c7);
+      border: 1px solid #fde68a; color: #92400e; font-size: 13px; 
+      padding: 10px 18px; border-radius: 10px; box-shadow: 0 2px 10px rgba(146, 64, 14, 0.1);
+    }
+    @media (max-width: 768px) {
+      .header-inner nav { display: none; }
+      .hero { padding: 120px 20px 80px; min-height: auto; }
+      .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
+      .search-btn span { display: none; }
+      .search-btn { padding: 14px; }
+      .categories-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .cat-btn { padding: 16px 8px; }
+      .cat-emoji { font-size: 24px; }
+      .cat-label { font-size: 10px; }
+      .results-grid { grid-template-columns: 1fr; }
+      .chat-panel { max-width: 100%; height: 80vh; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-pills { gap: 6px; }
+      .hero-pill { font-size: 11px; padding: 6px 12px; }
+      .stats-bar-inner { justify-content: center; }
+      .stats-right { display: none; }
+    }
+    #particle-canvas {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
+    .loader {
+      display: inline-block; width: 20px; height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 50%;
+      border-top-color: #fff; animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .best-match-badge {
+      display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 700;
+      color: #059669; background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+      padding: 4px 10px; border-radius: 99px; border: 1px solid #a7f3d0;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.1);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--saffron), var(--jade));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<header id="main-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-badge" id="logo-badge">भ</div>
+      <div class="logo-text">
+        <div class="logo-name">
+          <span class="bharat-text" id="logo-bharat">Bharat</span>Service
+        </div>
+        <div class="logo-sub">AI Government Service Finder</div>
+      </div>
+    </a>
+    <nav>
+      <a href="#search">Search</a>
+      <a href="#categories">Categories</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#features">Features</a>
+      <button class="btn-chat" onclick="openChat()">
+        <span>🤖</span> AI Assistant
+      </button>
+    </nav>
+    <button class="btn-chat" style="display:none" id="mob-chat-btn" onclick="openChat()">
+      🤖 Chat
+    </button>
+  </div>
+</header>
+
+<div class="stats-bar" id="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stats-pills">
+      <div class="stat-pill">
+        <span>🗂️</span>
+        <span><strong class="counter" data-target="150">0</strong>+ Government Services</span>
+      </div>
+      <div style="width:1px;height:14px;background:var(--border)"></div>
+      <div class="stat-pill">
+        <span>🔍</span>
+        <span>AI Semantic Search</span>
+      </div>
+      <div style="width:1px;height:14px;background:var(--border)"></div>
+      <div class="stat-pill" id="ai-status-pill">
+        <span class="dot dot-amber"></span>
+        <span>Checking AI status…</span>
+      </div>
+    </div>
+    <div class="stats-right" style="font-size:12px;color:var(--muted)">
+      Official .gov.in links only &nbsp;•&nbsp; No login required &nbsp;•&nbsp; Free for all citizens
+    </div>
+  </div>
+</div>
+
+<section class="hero" id="search">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      <span>AI-Powered • 150+ Services • Official Links Only</span>
+    </div>
+    <h1 class="hero-title">
+      Find the Right <span class="highlight"><span class="bharat-rotate" id="hero-bharat">Bharat</span> Service</span><br/>
+      in Seconds
+    </h1>
+    <p class="hero-sub">
+      Ask in plain language. Get official links, required documents, and
+      step-by-step guidance — instantly.
+    </p>
+    <div class="search-wrap">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text" 
+          id="search-input" 
+          class="search-input"
+          placeholder="e.g. Apply for a passport, renew driving licence…"
+          autocomplete="off"
+        />
+        <button class="search-btn" id="search-btn" onclick="doSearch()">
+          <span>🔍</span>
+          <span>Search</span>
+        </button>
+      </div>
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+    <div class="hero-pills">
+      <span class="hero-pill" onclick="doSearch('passport')">🛂 Passport</span>
+      <span class="hero-pill" onclick="doSearch('aadhaar')">🪪 Aadhaar</span>
+      <span class="hero-pill" onclick="doSearch('pan card')">💳 PAN Card</span>
+      <span class="hero-pill" onclick="doSearch('driving licence')">🚗 Driving Licence</span>
+      <span class="hero-pill" onclick="doSearch('voter id')">🗳️ Voter ID</span>
+    </div>
+  </div>
+</section>
+
+<div class="results-section" id="results-section">
+  <div class="results-header">
+    <div>
+      <div class="results-title" id="results-title">Results</div>
+      <div class="results-sub" id="results-sub"></div>
+    </div>
+    <button class="clear-btn" onclick="clearResults()">
+      <span>✕</span>
+      <span>Clear</span>
+    </button>
+  </div>
+  <div class="results-grid" id="results-grid"></div>
+</div>
+
+<section class="categories-section" id="categories">
+  <div style="text-align:center; margin-bottom:40px;" class="reveal">
+    <h2 class="section-title">Browse by Category</h2>
+    <p class="section-sub">Select any category to explore all related government services</p>
+  </div>
+  <div class="categories-grid" id="categories-grid"></div>
+</section>
+
+<section class="how-section" id="how-it-works">
+  <div class="reveal">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-sub">Four simple steps to find and apply for any Indian government service</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card reveal">
+      <div class="step-num">01</div>
+      <div class="step-icon" style="background:linear-gradient(135deg,rgba(255,125,26,0.15),rgba(255,125,26,0.05))">🔍</div>
+      <div class="step-title">Describe Your Need</div>
+      <p class="step-desc">Type in plain language — e.g. "I lost my PAN card" or "need a loan for my shop". No jargon needed.</p>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">02</div>
+      <div class="step-icon" style="background:linear-gradient(135deg,rgba(15,31,92,0.1),rgba(15,31,92,0.05))">🎯</div>
+      <div class="step-title">Get Matched Services</div>
+      <p class="step-desc">AI instantly matches your query to the most relevant official government services with all key details.</p>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">03</div>
+      <div class="step-icon" style="background:linear-gradient(135deg,rgba(88,28,220,0.1),rgba(88,28,220,0.05))">🤖</div>
+      <div class="step-title">Ask the AI Assistant</div>
+      <p class="step-desc">Click "Ask AI" on any card for personalised step-by-step guidance, document checklists, and fee details.</p>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">04</div>
+      <div class="step-icon" style="background:linear-gradient(135deg,rgba(19,138,63,0.15),rgba(19,138,63,0.05))">✅</div>
+      <div class="step-title">Visit Official Portal</div>
+      <p class="step-desc">Click "Visit Portal" to go directly to the official government website and complete your application.</p>
+    </div>
+  </div>
+</section>
+
+<section class="features-section" id="features">
+  <div class="features-inner">
+    <div style="text-align:center;" class="reveal">
+      <h2 class="features-heading">Why Use <span class="gradient-text">BharatService</span>?</h2>
+      <p class="features-sub">Built to make government services accessible to every Indian citizen</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap" style="background:linear-gradient(135deg,rgba(255,125,26,0.2),rgba(255,125,26,0.1))">⚡</div>
+        <div class="feature-title">Instant Results</div>
+        <p class="feature-desc">AI-powered semantic search returns the most relevant services in under a second.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap" style="background:linear-gradient(135deg,rgba(19,138,63,0.2),rgba(19,138,63,0.1))">🛡️</div>
+        <div class="feature-title">Official Links Only</div>
+        <p class="feature-desc">Every service links to official .gov.in portals. No third-party redirects ever.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap" style="background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(99,102,241,0.1))">🤖</div>
+        <div class="feature-title">AI Step-by-Step Guide</div>
+        <p class="feature-desc">Ask the AI assistant to walk you through any application process, end-to-end.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap" style="background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(139,92,246,0.1))">🌐</div>
+        <div class="feature-title">No Login Required</div>
+        <p class="feature-desc">Freely accessible to every citizen. No account, no signup, no friction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name"><span>Bharat</span>Service</div>
+        <p class="footer-desc">AI-powered platform helping every Indian citizen discover and navigate government services with ease. Built with ❤️ for Bharat.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="https://www.india.gov.in" target="_blank" rel="noopener">India.gov.in ↗</a></li>
+          <li><a href="https://www.mygov.in" target="_blank" rel="noopener">MyGov.in ↗</a></li>
+          <li><a href="https://digilocker.gov.in" target="_blank" rel="noopener">DigiLocker ↗</a></li>
+          <li><a href="https://web.umang.gov.in" target="_blank" rel="noopener">UMANG App ↗</a></li>
+          <li><a href="https://services.india.gov.in" target="_blank" rel="noopener">Services Portal ↗</a></li>
+          <li><a href="https://pgportal.gov.in" target="_blank" rel="noopener">Grievances (CPGRAMS) ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Disclaimer</div>
+        <p class="footer-note">This is an independent AI-assisted directory service. It is NOT an official Government of India website. Always verify information on official government portals before taking action.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> BharatService. Built for Indian Citizens.</span>
+      <div class="tricolor-dots">
+        <span style="background:#FF9933"></span>
+        <span style="background:rgba(255,255,255,0.8)"></span>
+        <span style="background:#138808"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-fab" id="chat-fab" onclick="toggleChat()" title="Open AI Assistant">
+  🤖
+</button>
+
+<div class="chat-panel" id="chat-panel">
+  <div class="chat-header">
+    <div class="chat-avatar">
+      🤖
+      <span class="chat-status-dot" id="chat-status-dot" style="background:#fbbf24"></span>
+    </div>
+    <div>
+      <div class="chat-title">BharatService AI</div>
+      <div class="chat-subtitle" id="chat-subtitle">Checking AI status…</div>
+    </div>
+    <div class="chat-actions">
+      <button class="icon-btn" onclick="clearChat()" title="Clear chat">🗑️</button>
+      <button class="icon-btn" onclick="closeChat()" title="Close">✕</button>
+    </div>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="quick-prompts" id="quick-prompts">
+    <div class="qp-label">Quick Questions</div>
+    <div class="qp-grid">
+      <button class="qp-btn" onclick="sendQuick('What documents do I need for a passport?')">📄 Passport docs</button>
+      <button class="qp-btn" onclick="sendQuick('How to apply for PM Kisan scheme?')">🌾 PM Kisan</button>
+      <button class="qp-btn" onclick="sendQuick('Steps to register a business online')">🏢 MSME Registration</button>
+      <button class="qp-btn" onclick="sendQuick('How to apply for Ayushman Bharat health card?')">🏥 Ayushman card</button>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <div class="chat-input-row">
+      <textarea
+        id="chat-textarea" 
+        class="chat-textarea" 
+        rows="1"
+        placeholder="Ask about any government service…"
+        onkeydown="handleChatKey(event)"
+        oninput="autoResize(this)"
+      ></textarea>
+      <button class="send-btn" id="send-btn" onclick="sendChatMessage()" title="Send">➤</button>
+    </div>
+    <div class="chat-disclaimer">AI may make mistakes. Always verify on official government portals.</div>
+  </div>
+</div>
+
+<script>
+const API = 'http://localhost:8000';
+
+const BHARAT_LANGUAGES = [
+  { text: 'Bharat', lang: 'English', font: 'Rajdhani' },
+  { text: '\u092D\u093E\u0930\u0924', lang: 'Hindi', font: 'Noto Sans Devanagari' },
+  { text: '\u0C2D\u0C3E\u0C30\u0C24\u0C4D', lang: 'Telugu', font: 'Noto Sans Telugu' },
+  { text: '\u0CAD\u0CBE\u0CB0\u0CA4', lang: 'Kannada', font: 'Noto Sans Kannada' },
+  { text: '\u092D\u093E\u0930\u0924', lang: 'Marathi', font: 'Noto Sans Devanagari' },
+  { text: '\u0BAA\u0BBE\u0BB0\u0BA4\u0BCD', lang: 'Tamil', font: 'Noto Sans Tamil' }
+];
+
+const SUGGESTIONS = [
+  { icon: '🛂', text: 'Apply for a passport' },
+  { icon: '🪪', text: 'Update my Aadhaar address' },
+  { icon: '💳', text: 'Get a PAN card' },
+  { icon: '🗳️', text: 'Register as a voter' },
+  { icon: '🚗', text: 'How to get a driving licence' },
+  { icon: '🌾', text: 'PM Kisan farmer subsidy' },
+  { icon: '🏥', text: 'Ayushman Bharat health card' },
+  { icon: '🏢', text: 'Register my small business MSME' },
+  { icon: '🎓', text: 'Student scholarship application' },
+  { icon: '💰', text: 'File income tax return ITR' },
+  { icon: '🏠', text: 'Pradhan Mantri Awas Yojana housing scheme' },
+  { icon: '👷', text: 'Withdraw my PF from EPFO' },
+];
+
+const CATEGORIES = [
+  { label: 'Identity & Travel', icon: '🛂', q: 'passport visa pcc oci overseas citizen identity travel' },
+  { label: 'Identity',          icon: '🪪', q: 'aadhaar uid biometric identity enrollment update' },
+  { label: 'Tax & Finance',     icon: '💸', q: 'income tax return itr pan card gst filing customs duty' },
+  { label: 'Transport',         icon: '🚗', q: 'driving licence vehicle registration rc fastag vahan' },
+  { label: 'Civil Registration',icon: '📋', q: 'birth certificate death certificate marriage registration' },
+  { label: 'State Services',    icon: '🏛️', q: 'caste certificate income certificate ration card land records' },
+  { label: 'Agriculture',       icon: '🌾', q: 'pm kisan fasal bima kisan credit card soil health enam' },
+  { label: 'Health',            icon: '🏥', q: 'ayushman bharat abha health insurance jan aushadhi fssai' },
+  { label: 'Housing',           icon: '🏠', q: 'pmay housing urban gramin clss subsidy smart cities' },
+  { label: 'Labour',            icon: '👷', q: 'epfo pf eshram esic ncs job portal apprenticeship' },
+  { label: 'Education',         icon: '🎓', q: 'scholarship nsp jee neet ugc swayam skill samarth' },
+  { label: 'Business & MSME',   icon: '🏢', q: 'msme udyam startup india gem company mudra pmegp' },
+  { label: 'Banking',           icon: '🏦', q: 'jan dhan pmjdy post office ppf pmsby pmjjby aeps' },
+  { label: 'Electoral',         icon: '🗳️', q: 'voter id epic card election registration eci' },
+  { label: 'Pension',           icon: '👴', q: 'nps national pension pran nsap old age widow pension' },
+  { label: 'Digital Services',  icon: '📱', q: 'digilocker umang bhim upi digital payment e-procurement' },
+  { label: 'Food & PDS',        icon: '🍚', q: 'ration card nfsa pds one nation one ration card onorc' },
+  { label: 'Energy',            icon: '⚡', q: 'lpg ujjwala gas connection saubhagya electricity pm kusum' },
+  { label: 'Water',             icon: '💧', q: 'jal jeevan mission tap water swachh bharat toilet' },
+  { label: 'Rural Dev',         icon: '🌱', q: 'mgnrega nrega job card pmgsy gram sadak aajeevika' },
+  { label: 'Women & Child',     icon: '👩', q: 'pmmvy maternity anganwadi sukanya samriddhi beti bachao' },
+  { label: 'Skill Dev',         icon: '🛠️', q: 'pmkvy skill india digital training vocational nsdc' },
+  { label: 'Govt Jobs',         icon: '📝', q: 'upsc civil services ssc cgl ibps bank rrb agniveer' },
+  { label: 'Legal',             icon: '⚖️', q: 'supreme court ecourts nalsa legal aid lok adalat rti' },
+  { label: 'Governance',        icon: '🏗️', q: 'cpgrams grievance mygov rti pfms dbt gati shakti' },
+  { label: 'Commerce',          icon: '🌐', q: 'apeda mpeda invest india fdi bis hallmark iec dgft' },
+  { label: 'Railways & Air',    icon: '✈️', q: 'irctc train ticket rail madad dgca pilot digi yatra' },
+  { label: 'Posts & Telecom',   icon: '📮', q: 'india post speed post mnp mobile portability trai spam' },
+  { label: 'Science & Tech',    icon: '🔬', q: 'isro space csir technology imd weather ndma disaster' },
+  { label: 'Environment',       icon: '🌿', q: 'cpcb pollution forest clearance environmental parivesh' },
+];
+
+const CAT_COLORS = {
+  'Identity & Travel': 'bg:#eff6ff;color:#1d4ed8',
+  'Identity': 'bg:#eef2ff;color:#4338ca',
+  'Tax & Finance': 'bg:#ecfdf5;color:#065f46',
+  'Transport': 'bg:#fff7ed;color:#c2410c',
+  'Civil Registration': 'bg:#fdf2f8;color:#be185d',
+  'State Services': 'bg:#fefce8;color:#854d0e',
+  'Agriculture': 'bg:#f7fee7;color:#3f6212',
+  'Health': 'bg:#fef2f2;color:#991b1b',
+  'Housing': 'bg:#f0fdfa;color:#115e59',
+  'Labour': 'bg:#ecfeff;color:#164e63',
+  'Education': 'bg:#f0f9ff;color:#075985',
+  'Business & MSME': 'bg:#fffbeb;color:#92400e',
+  'Banking': 'bg:#f0fdf4;color:#14532d',
+  'Electoral': 'bg:#faf5ff;color:#6b21a8',
+  'Pension': 'bg:#f8fafc;color:#334155',
+  'Digital Services': 'bg:#f5f3ff;color:#5b21b6',
+  'Food & PDS': 'bg:#fff1f2;color:#9f1239',
+  'Energy': 'bg:#fff7ed;color:#9a3412',
+  'Water': 'bg:#ecfeff;color:#155e75',
+  'Rural Dev': 'bg:#f7fee7;color:#365314',
+  'Women & Child': 'bg:#fdf4ff;color:#86198f',
+  'Skill Dev': 'bg:#eef2ff;color:#3730a3',
+  'Govt Jobs': 'bg:#eff6ff;color:#1e3a8a',
+  'Legal': 'bg:#fafaf9;color:#44403c',
+  'Governance': 'bg:#f9fafb;color:#374151',
+  'Commerce': 'bg:#fdf4ff;color:#7e22ce',
+  'Railways & Air': 'bg:#f0f9ff;color:#0c4a6e',
+  'Posts & Telecom': 'bg:#fffbeb;color:#78350f',
+  'Science & Tech': 'bg:#faf5ff;color:#581c87',
+  'Environment': 'bg:#ecfdf5;color:#14532d',
+};
+
+let allServices = [];
+let chatHistory = [];
+let chatOpen = false;
+let aiOnline = false;
+let currentBharatIndex = 0;
+let chatContext = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('year').textContent = new Date().getFullYear();
+  renderCategories();
+  setupSearch();
+  addWelcomeMessage();
+  checkAI();
+  loadServices();
+  startBharatRotation();
+  initScrollAnimations();
+  initParticles();
+  initHero3D();
+  window.addEventListener('scroll', handleHeaderScroll);
+  animateCounters();
+  if (window.innerWidth <= 768) {
+    document.getElementById('mob-chat-btn').style.display = 'flex';
+  }
+});
+
+function startBharatRotation() {
+  const logoBharat = document.getElementById('logo-bharat');
+  const heroBharat = document.getElementById('hero-bharat');
+  setInterval(() => {
+    logoBharat.classList.add('changing');
+    heroBharat.classList.add('changing');
+    setTimeout(() => {
+      currentBharatIndex = (currentBharatIndex + 1) % BHARAT_LANGUAGES.length;
+      const lang = BHARAT_LANGUAGES[currentBharatIndex];
+      logoBharat.textContent = lang.text;
+      heroBharat.textContent = lang.text;
+      if (lang.lang !== 'English') {
+        logoBharat.style.fontFamily = lang.font + ', Rajdhani, sans-serif';
+        heroBharat.style.fontFamily = lang.font + ', Rajdhani, sans-serif';
+      } else {
+        logoBharat.style.fontFamily = 'Rajdhani, sans-serif';
+        heroBharat.style.fontFamily = 'Rajdhani, sans-serif';
+      }
+      setTimeout(() => {
+        logoBharat.classList.remove('changing');
+        heroBharat.classList.remove('changing');
+      }, 50);
+    }, 300);
+  }, 3000);
+}
+
+function handleHeaderScroll() {
+  const header = document.getElementById('main-header');
+  const statsBar = document.getElementById('stats-bar');
+  if (window.scrollY > 100) {
+    header.classList.add('scrolled');
+    statsBar.classList.add('hidden');
+  } else {
+    header.classList.remove('scrolled');
+    statsBar.classList.remove('hidden');
+  }
+}
+
+function initParticles() {
+  const canvas = document.getElementById('particle-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  let animationId;
+  let isActive = true;
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const particleCount = window.innerWidth < 768 ? 15 : 25;
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 3 + 1,
+      speedX: (Math.random() - 0.5) * 0.5,
+      speedY: (Math.random() - 0.5) * 0.5,
+      opacity: Math.random() * 0.5 + 0.2
+    });
+  }
+  function animate() {
+    if (!isActive) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((particle, i) => {
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
+      if (particle.x < 0) particle.x = canvas.width;
+      if (particle.x > canvas.width) particle.x = 0;
+      if (particle.y < 0) particle.y = canvas.height;
+      if (particle.y > canvas.height) particle.y = 0;
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 125, 26, ${particle.opacity})`;
+      ctx.fill();
+      if (i % 3 === 0) {
+        particles.slice(i + 1, i + 4).forEach(other => {
+          const dx = particle.x - other.x;
+          const dy = particle.y - other.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(other.x, other.y);
+            ctx.strokeStyle = `rgba(255, 125, 26, ${0.1 * (1 - distance / 100)})`;
+            ctx.stroke();
+          }
+        });
+      }
+    });
+    animationId = requestAnimationFrame(animate);
+  }
+  animate();
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { isActive = false; cancelAnimationFrame(animationId); }
+    else { isActive = true; animate(); }
+  });
+}
+
+function initHero3D() {
+  if (window.innerWidth < 768) return;
+  const hero = document.querySelector('.hero');
+  const heroInner = document.querySelector('.hero-inner');
+  let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    mouseX = (e.clientX - rect.left - rect.width / 2) / rect.width;
+    mouseY = (e.clientY - rect.top - rect.height / 2) / rect.height;
+  });
+  function animate() {
+    currentX += (mouseX - currentX) * 0.05;
+    currentY += (mouseY - currentY) * 0.05;
+    heroInner.style.transform = `perspective(1000px) rotateX(${currentY * -10}deg) rotateY(${currentX * 10}deg)`;
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+function initScrollAnimations() {
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  reveals.forEach(reveal => observer.observe(reveal));
+}
+
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        const updateCounter = () => {
+          current += step;
+          if (current < target) { counter.textContent = Math.floor(current); requestAnimationFrame(updateCounter); }
+          else { counter.textContent = target; }
+        };
+        updateCounter();
+        observer.unobserve(counter);
+      }
+    });
+  });
+  counters.forEach(counter => observer.observe(counter));
+}
+
+async function checkAI() {
+  try {
+    const r = await fetch(`${API}/health`, { signal: AbortSignal.timeout(5000) });
+    if (r.ok) {
+      const d = await r.json();
+      aiOnline = d.ai_connected;
+      const pill = document.getElementById('ai-status-pill');
+      const dot = document.getElementById('chat-status-dot');
+      const sub = document.getElementById('chat-subtitle');
+      if (d.ai_connected) {
+        pill.innerHTML = '<span class="dot dot-green"></span><span>AI Online</span>';
+        dot.style.background = '#4ade80';
+        sub.textContent = 'AI Connected - Ready to help';
+      } else {
+        pill.innerHTML = '<span class="dot dot-amber"></span><span>AI Fallback Mode</span>';
+        dot.style.background = '#fbbf24';
+        sub.textContent = 'Fallback Mode - Start LM Studio for full AI';
+      }
+    }
+  } catch {
+    const pill = document.getElementById('ai-status-pill');
+    pill.innerHTML = '<span class="dot dot-amber"></span><span>Offline Mode</span>';
+  }
+}
+
+async function loadServices() {
+  try {
+    const r = await fetch(`${API}/api/services`, { signal: AbortSignal.timeout(6000) });
+    if (r.ok) allServices = await r.json();
+  } catch { /* Will use API search fallback */ }
+}
+
+function setupSearch() {
+  const inp = document.getElementById('search-input');
+  const sug = document.getElementById('suggestions');
+  sug.innerHTML = `<div class="sugg-header">Popular Searches</div>` +
+    SUGGESTIONS.map(s =>
+      `<button class="sugg-item" onmousedown="doSearch('${s.text.replace(/'/g,"\\'")}')">
+        <span class="sugg-item-icon">${s.icon}</span>
+        <span>${s.text}</span>
+      </button>`
+    ).join('');
+  inp.addEventListener('focus', () => sug.classList.add('open'));
+  inp.addEventListener('blur', () => setTimeout(() => sug.classList.remove('open'), 180));
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+}
+
+async function doSearch(query) {
+  const inp = document.getElementById('search-input');
+  const q = (query || inp.value).trim();
+  if (!q) return;
+  inp.value = q;
+  document.getElementById('suggestions').classList.remove('open');
+  const btn = document.getElementById('search-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loader"></span><span>Searching\u2026</span>';
+  showResultsSection();
+  document.getElementById('results-grid').innerHTML = skeletonGrid(6);
+  document.getElementById('results-title').textContent = 'Searching\u2026';
+  document.getElementById('results-sub').textContent = '';
+  try {
+    const r = await fetch(`${API}/api/search`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: q, top_k: 9 }),
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const data = await r.json();
+    renderResults(data.results, q);
+  } catch (e) {
+    renderError(e.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<span>\uD83D\uDD0D</span><span>Search</span>';
+    document.getElementById('results-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function showResultsSection() {
+  document.getElementById('results-section').classList.add('visible');
+}
+
+function clearResults() {
+  document.getElementById('results-section').classList.remove('visible');
+  document.getElementById('search-input').value = '';
+}
+
+function skeletonGrid(n) {
+  return Array.from({ length: n }).map(() =>
+    `<div class="service-card" style="animation:none">
+      <div class="card-body">
+        <div class="skeleton" style="height:20px;width:70%;margin-bottom:12px"></div>
+        <div class="skeleton" style="height:26px;width:40%;border-radius:99px;margin-bottom:14px"></div>
+        <div class="skeleton" style="height:14px;width:100%;margin-bottom:8px"></div>
+        <div class="skeleton" style="height:14px;width:85%;margin-bottom:18px"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div class="skeleton" style="height:14px"></div>
+          <div class="skeleton" style="height:14px"></div>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="skeleton" style="flex:1;height:42px;border-radius:12px"></div>
+        <div class="skeleton" style="width:80px;height:42px;border-radius:12px"></div>
+      </div>
+    </div>`
+  ).join('');
+}
+
+function renderResults(results, query) {
+  const title = document.getElementById('results-title');
+  const sub = document.getElementById('results-sub');
+  const grid = document.getElementById('results-grid');
+  if (!results || results.length === 0) {
+    title.textContent = 'No Results Found';
+    sub.textContent = '';
+    grid.innerHTML = `
+      <div class="empty-state" style="grid-column:1/-1">
+        <div class="empty-icon">\uD83D\uDD0E</div>
+        <div class="empty-title">No services found</div>
+        <p class="empty-desc">Try rephrasing \u2014 e.g. "passport application" or "voter ID registration"</p>
+      </div>`;
+    return;
+  }
+  title.textContent = `${results.length} Services Found`;
+  sub.textContent = `Results for: "${query}"`;
+  grid.innerHTML = results.map((s, i) => buildCard(s, i)).join('');
+}
+
+function renderError(msg) {
+  document.getElementById('results-title').textContent = 'Search Error';
+  document.getElementById('results-sub').textContent = '';
+  document.getElementById('results-grid').innerHTML = `
+    <div class="empty-state" style="grid-column:1/-1">
+      <div class="empty-icon">\u26A0\uFE0F</div>
+      <div class="empty-title">Could not complete search</div>
+      <p class="empty-desc">Make sure the backend server is running.</p>
+      <div class="error-note">Backend: <code>http://localhost:8000</code></div>
+    </div>`;
+}
+
+function buildCard(s, i) {
+  const c = catStyle(s.category);
+  const isBest = s.relevance_score > 0.72;
+  return `
+  <div class="service-card" style="animation:fadeIn 0.5s ease-out ${i * 0.1}s both">
+    <div class="card-body">
+      <div class="card-name">${s.service_name}</div>
+      <div style="margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span class="card-cat" style="background:${c.bg};color:${c.fg}">
+          <span class="cat-dot" style="background:${c.fg}"></span>
+          ${s.category}
+        </span>
+        ${isBest ? '<span class="best-match-badge">\u2605 Best Match</span>' : ''}
+      </div>
+      <div class="card-desc">${s.description}</div>
+      <div class="card-meta">
+        <div class="meta-item"><span>\u23F1\uFE0F</span><span>${s.processing_time}</span></div>
+        <div class="meta-item"><span>\u20B9</span><span>${s.fee}</span></div>
+      </div>
+    </div>
+    <div class="card-docs" id="docs-${s.id}">
+      <div class="docs-inner">
+        <div class="docs-title">\uD83D\uDCCE Required Documents</div>
+        ${s.documents.map((d, j) => `
+          <div class="doc-item">
+            <span class="doc-num">${j + 1}</span>
+            <span>${d}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+    <div class="card-actions">
+      <a href="${s.url}" target="_blank" rel="noopener noreferrer" class="btn-portal">
+        <span>\uD83D\uDD17</span>
+        <span>Visit Portal</span>
+      </a>
+      <button class="btn-ai" onclick='askAI(${JSON.stringify(s).replace(/'/g, "&#39;")})'>
+        <span>\uD83E\uDD16</span>
+        <span>Ask AI</span>
+      </button>
+      <button class="btn-expand" onclick="toggleDocs('${s.id}', this)" title="Show documents">
+        \u25BE
+      </button>
+    </div>
+  </div>`;
+}
+
+function toggleDocs(id, btn) {
+  const el = document.getElementById(`docs-${id}`);
+  if (el.classList.toggle('open')) {
+    btn.textContent = '\u25B4';
+    btn.title = 'Hide documents';
+  } else {
+    btn.textContent = '\u25BE';
+    btn.title = 'Show documents';
+  }
+}
+
+function askAI(s) {
+  const ctx = `Service: ${s.service_name}\nCategory: ${s.category}\nDescription: ${s.description}\nMinistry: ${s.ministry}\nFee: ${s.fee}\nProcessing Time: ${s.processing_time}\nRequired Documents: ${s.documents.join(', ')}\nOfficial URL: ${s.url}`;
+  openChatWithContext(ctx);
+  sendChatMessageText(`Tell me step-by-step how to apply for "${s.service_name}" and what documents I need.`);
+}
+
+function catStyle(cat) {
+  const s = CAT_COLORS[cat] || 'bg:#f9fafb;color:#374151';
+  const parts = s.split(';');
+  const bg = parts[0].replace('bg:', '');
+  const fg = parts[1].replace('color:', '');
+  return { bg, fg };
+}
+
+function renderCategories() {
+  document.getElementById('categories-grid').innerHTML = CATEGORIES.map((c, i) =>
+    `<button class="cat-btn" onclick="doSearch('${c.q.replace(/'/g, "\\'")}')">
+      <span class="cat-emoji">${c.icon}</span>
+      <span class="cat-label">${c.label}</span>
+    </button>`
+  ).join('');
+}
+
+function openChat() {
+  chatOpen = true;
+  document.getElementById('chat-panel').classList.add('open');
+  document.getElementById('chat-fab').style.display = 'none';
+  document.getElementById('chat-textarea').focus();
+}
+
+function closeChat() {
+  chatOpen = false;
+  document.getElementById('chat-panel').classList.remove('open');
+  document.getElementById('chat-fab').style.display = 'flex';
+}
+
+function toggleChat() { chatOpen ? closeChat() : openChat(); }
+
+function openChatWithContext(ctx) {
+  chatContext = ctx;
+  openChat();
+}
+
+function addWelcomeMessage() {
+  const msgs = document.getElementById('chat-messages');
+  msgs.innerHTML = `
+    <div class="msg">
+      <div class="msg-avatar ai">\uD83E\uDD16</div>
+      <div>
+        <div class="msg-bubble ai">
+          <strong>Namaste! \uD83D\uDE4F</strong><br><br>
+          I'm <strong>BharatService AI</strong>, your guide to Indian Government Services.<br><br>
+          I can help you with passport, Aadhaar, PAN, income tax, driving licence, farmer schemes, health insurance, MSME registration, and 150+ more services.<br><br>
+          <strong>How can I assist you today?</strong>
+        </div>
+        <div class="msg-time">${now()}</div>
+      </div>
+    </div>`;
+}
+
+function clearChat() {
+  chatHistory = [];
+  chatContext = null;
+  addWelcomeMessage();
+  document.getElementById('quick-prompts').style.display = 'block';
+}
+
+function sendQuick(text) { sendChatMessageText(text); }
+
+async function sendChatMessage() {
+  const ta = document.getElementById('chat-textarea');
+  const text = ta.value.trim();
+  if (!text) return;
+  ta.value = '';
+  ta.style.height = '40px';
+  await sendChatMessageText(text);
+}
+
+async function sendChatMessageText(text) {
+  document.getElementById('quick-prompts').style.display = 'none';
+  const msgs = document.getElementById('chat-messages');
+  msgs.innerHTML += `
+    <div class="msg user">
+      <div>
+        <div class="msg-bubble user">${escHtml(text)}</div>
+        <div class="msg-time" style="text-align:right">${now()}</div>
+      </div>
+      <div class="msg-avatar user">\uD83D\uDC64</div>
+    </div>`;
+  scrollChat();
+  const typingId = 'typing-' + Date.now();
+  msgs.innerHTML += `
+    <div class="msg" id="${typingId}">
+      <div class="msg-avatar ai">\uD83E\uDD16</div>
+      <div class="msg-bubble ai">
+        <div class="typing">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>`;
+  scrollChat();
+  document.getElementById('send-btn').disabled = true;
+  chatHistory.push({ role: 'user', content: text });
+  try {
+    const r = await fetch(`${API}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: text,
+        history: chatHistory.slice(-10),
+        service_context: chatContext
+      }),
+      signal: AbortSignal.timeout(90000),
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const d = await r.json();
+    const reply = d.response || 'Sorry, I could not get a response.';
+    chatHistory.push({ role: 'assistant', content: reply });
+    const typingEl = document.getElementById(typingId);
+    if (typingEl) typingEl.remove();
+    msgs.innerHTML += `
+      <div class="msg">
+        <div class="msg-avatar ai">\uD83E\uDD16</div>
+        <div>
+          <div class="msg-bubble ai">${formatMarkdown(reply)}</div>
+          <div class="msg-time">${now()}</div>
+        </div>
+      </div>`;
+  } catch (e) {
+    const typingEl = document.getElementById(typingId);
+    if (typingEl) typingEl.remove();
+    msgs.innerHTML += `
+      <div class="msg">
+        <div class="msg-avatar ai">\uD83E\uDD16</div>
+        <div>
+          <div class="msg-error">
+            \u26A0\uFE0F ${e.name === 'TimeoutError' ? 'AI took too long. Please try again.' : 'Backend unreachable. Make sure the server is running on localhost:8000.'}
+          </div>
+        </div>
+      </div>`;
+  } finally {
+    document.getElementById('send-btn').disabled = false;
+    scrollChat();
+  }
+}
+
+function handleChatKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChatMessage(); }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+}
+
+function scrollChat() {
+  const m = document.getElementById('chat-messages');
+  m.scrollTop = m.scrollHeight;
+}
+
+function now() {
+  return new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true });
+}
+
+function escHtml(s) {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function formatMarkdown(text) {
+  return escHtml(text)
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/`(.*?)`/g, '<code style="background:#f0f3fc;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:0.9em">$1</code>')
+    .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener" style="color:var(--saffron);text-decoration:underline">$1</a>')
+    .replace(/\n\n/g, '<br><br>')
+    .replace(/\n/g, '<br>');
+}
+</script>
+</body>
+</html>

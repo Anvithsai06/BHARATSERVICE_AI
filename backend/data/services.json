@@ -1,0 +1,3933 @@
+[
+  {
+    "id": "1",
+    "service_name": "Passport Application (New / Renewal)",
+    "category": "Identity & Travel",
+    "description": "Apply for a fresh passport, renew an expiring passport, apply for a minor's passport, or obtain an emergency certificate for urgent travel.",
+    "url": "https://passportindia.gov.in",
+    "ministry": "Ministry of External Affairs",
+    "documents": [
+      "Proof of Date of Birth (Birth Certificate / Class 10 Marksheet)",
+      "Proof of Address (Aadhaar / Utility Bill)",
+      "Aadhaar Card (original)",
+      "Passport-size Photographs"
+    ],
+    "processing_time": "30-45 days (Normal), 7-14 days (Tatkal)",
+    "fee": "₹1500 (Normal 36-page), ₹2000 (Tatkal 36-page), ₹2000 (Normal 60-page)",
+    "tags": [
+      "passport",
+      "travel",
+      "international travel",
+      "renewal",
+      "tatkal passport",
+      "mea",
+      "psk"
+    ]
+  },
+  {
+    "id": "2",
+    "service_name": "Police Clearance Certificate (PCC)",
+    "category": "Identity & Travel",
+    "description": "Obtain a Police Clearance Certificate required for immigration, long-term foreign employment, student visa, and permanent residency abroad.",
+    "url": "https://passportindia.gov.in",
+    "ministry": "Ministry of External Affairs",
+    "documents": [
+      "Valid Indian Passport",
+      "Aadhaar Card",
+      "Proof of Current Address",
+      "Completed Application Form"
+    ],
+    "processing_time": "7-30 days",
+    "fee": "₹500",
+    "tags": [
+      "pcc",
+      "police clearance",
+      "character certificate",
+      "immigration",
+      "visa",
+      "abroad",
+      "emigration"
+    ]
+  },
+  {
+    "id": "3",
+    "service_name": "OCI Card (Overseas Citizen of India)",
+    "category": "Identity & Travel",
+    "description": "Register as an Overseas Citizen of India to obtain a lifelong multiple-entry visa and parity with NRI benefits for persons of Indian origin holding foreign nationality.",
+    "url": "https://ociservices.gov.in",
+    "ministry": "Ministry of Home Affairs",
+    "documents": [
+      "Foreign Passport",
+      "Proof of Indian Origin (Previous Indian Passport / Birth Certificate)",
+      "Address Proof",
+      "Passport-size Photographs"
+    ],
+    "processing_time": "30-120 days",
+    "fee": "USD 275 (new application), USD 25 (re-issuance on new passport)",
+    "tags": [
+      "oci",
+      "overseas citizen",
+      "nri",
+      "foreign national",
+      "indian origin",
+      "visa free",
+      "dual citizenship"
+    ]
+  },
+  {
+    "id": "4",
+    "service_name": "Visa-on-Arrival & e-Visa for Foreign Nationals",
+    "category": "Identity & Travel",
+    "description": "Foreign nationals can apply for an Indian e-Tourist, e-Business, or e-Medical Visa online before arrival at designated Indian airports and seaports.",
+    "url": "https://indianvisaonline.gov.in",
+    "ministry": "Ministry of Home Affairs",
+    "documents": [
+      "Valid Foreign Passport (6 months validity)",
+      "Recent Passport-size Photograph",
+      "Return Ticket Details",
+      "Proof of Sufficient Funds"
+    ],
+    "processing_time": "72-96 hours",
+    "fee": "USD 10-80 (varies by nationality and visa type)",
+    "tags": [
+      "e-visa",
+      "tourist visa",
+      "business visa",
+      "india visa",
+      "foreign nationals",
+      "visa on arrival",
+      "evisa"
+    ]
+  },
+  {
+    "id": "5",
+    "service_name": "FRRO - Foreigners Registration & Stay Extension",
+    "category": "Identity & Travel",
+    "description": "Foreigners staying in India for over 180 days must register with FRRO. Also used for visa extension, conversion, and exit permits.",
+    "url": "https://indianfrro.gov.in",
+    "ministry": "Ministry of Home Affairs",
+    "documents": [
+      "Foreign Passport",
+      "Valid Visa",
+      "Residential Address Proof in India",
+      "Passport-size Photographs",
+      "Employer/Institution Letter (if applicable)"
+    ],
+    "processing_time": "3-15 working days",
+    "fee": "₹100-₹500 depending on service",
+    "tags": [
+      "frro",
+      "foreigners registration",
+      "visa extension",
+      "stay extension",
+      "foreign nationals",
+      "rp",
+      "residential permit"
+    ]
+  },
+  {
+    "id": "6",
+    "service_name": "Aadhaar Enrollment & Update",
+    "category": "Identity",
+    "description": "Enroll for a new 12-digit Aadhaar unique identity number or update existing details including name, date of birth, address, mobile number, email, and biometrics.",
+    "url": "https://uidai.gov.in",
+    "ministry": "Unique Identification Authority of India (UIDAI)",
+    "documents": [
+      "Proof of Identity (PAN / Voter ID / Passport)",
+      "Proof of Address (Bank Passbook / Utility Bill)",
+      "Proof of Date of Birth (Birth Certificate / Marksheet)"
+    ],
+    "processing_time": "Enrollment: immediate; Update: 7-14 days",
+    "fee": "Free (Enrollment), ₹50 (Update via Aadhaar centre), Free (Self-update online)",
+    "tags": [
+      "aadhaar",
+      "uid",
+      "biometric",
+      "12-digit",
+      "identity",
+      "address update",
+      "myaadhaar",
+      "uidai",
+      "e-aadhaar"
+    ]
+  },
+  {
+    "id": "7",
+    "service_name": "mAadhaar - Virtual ID & Aadhaar Services",
+    "category": "Identity",
+    "description": "Generate Virtual ID (VID), lock/unlock biometrics, download e-Aadhaar, and access all Aadhaar self-service features through the UIDAI online portal.",
+    "url": "https://myaadhaar.uidai.gov.in",
+    "ministry": "Unique Identification Authority of India (UIDAI)",
+    "documents": [
+      "Aadhaar Number",
+      "Registered Mobile Number (for OTP)"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "virtual id",
+      "vid",
+      "maadhaar",
+      "e-aadhaar",
+      "biometric lock",
+      "aadhaar download",
+      "uidai",
+      "self service"
+    ]
+  },
+  {
+    "id": "8",
+    "service_name": "PAN Card Application (New & Correction)",
+    "category": "Tax & Finance",
+    "description": "Apply for a new Permanent Account Number (PAN) card, obtain an instant e-PAN linked to Aadhaar, or correct existing PAN details. Mandatory for income tax filing and high-value financial transactions.",
+    "url": "https://www.incometax.gov.in",
+    "ministry": "Ministry of Finance – Central Board of Direct Taxes (CBDT)",
+    "documents": [
+      "Aadhaar Card (for instant e-PAN)",
+      "Proof of Identity",
+      "Proof of Address",
+      "Proof of Date of Birth",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "Instant (e-PAN), 15-20 days (physical card)",
+    "fee": "Free (instant e-PAN), ₹107 (Indian address), ₹1017 (foreign address)",
+    "tags": [
+      "pan card",
+      "permanent account number",
+      "income tax",
+      "e-pan",
+      "tan",
+      "tax identification",
+      "cbdt",
+      "nsdl",
+      "utiitsl"
+    ]
+  },
+  {
+    "id": "9",
+    "service_name": "Income Tax Return (ITR) Filing",
+    "category": "Tax & Finance",
+    "description": "File your annual Income Tax Return online, claim refunds, respond to notices, and access all income tax self-service features on the official e-filing portal.",
+    "url": "https://www.incometax.gov.in",
+    "ministry": "Ministry of Finance – Central Board of Direct Taxes (CBDT)",
+    "documents": [
+      "PAN Card",
+      "Aadhaar Card",
+      "Form 16 (from employer)",
+      "Bank Account Details",
+      "Investment Proofs (80C, 80D, etc.)",
+      "TDS Certificate"
+    ],
+    "processing_time": "Instant (filing), 15-45 days (refund processing)",
+    "fee": "Free",
+    "tags": [
+      "itr",
+      "income tax return",
+      "tax filing",
+      "refund",
+      "form 16",
+      "e-filing",
+      "cbdt",
+      "assessment year",
+      "tds",
+      "80c"
+    ]
+  },
+  {
+    "id": "10",
+    "service_name": "GST Registration & Filing",
+    "category": "Tax & Finance",
+    "description": "Register for Goods and Services Tax (GST), file monthly or quarterly GSTR returns, pay taxes, and access GST self-service features on the official portal.",
+    "url": "https://www.gst.gov.in",
+    "ministry": "Ministry of Finance – Central Board of Indirect Taxes & Customs (CBIC)",
+    "documents": [
+      "PAN Card",
+      "Aadhaar Card",
+      "Business Registration Proof",
+      "Bank Account Statement / Cancelled Cheque",
+      "Digital Signature Certificate (for companies)"
+    ],
+    "processing_time": "7-10 working days (registration)",
+    "fee": "Free",
+    "tags": [
+      "gst",
+      "goods and services tax",
+      "gstin",
+      "gstr-1",
+      "gstr-3b",
+      "input tax credit",
+      "e-way bill",
+      "gstn",
+      "indirect tax"
+    ]
+  },
+  {
+    "id": "11",
+    "service_name": "E-Way Bill Generation (GST)",
+    "category": "Tax & Finance",
+    "description": "Generate, update, cancel, and print E-Way Bills mandatory for movement of goods exceeding ₹50,000 in value across states or within a state under GST.",
+    "url": "https://ewaybill.gst.gov.in",
+    "ministry": "Ministry of Finance – Central Board of Indirect Taxes & Customs (CBIC)",
+    "documents": [
+      "GSTIN",
+      "Invoice / Bill of Supply / Delivery Challan",
+      "Transporter ID or Vehicle Number"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "e-way bill",
+      "eway bill",
+      "gst transport",
+      "goods movement",
+      "ewb",
+      "cbic",
+      "logistics"
+    ]
+  },
+  {
+    "id": "12",
+    "service_name": "GST e-Invoice System",
+    "category": "Tax & Finance",
+    "description": "Mandatory electronic invoice reporting system under GST for eligible taxpayers. Generate Invoice Reference Number (IRN) and QR codes for B2B invoices.",
+    "url": "https://einvoice1.gst.gov.in",
+    "ministry": "Ministry of Finance – Central Board of Indirect Taxes & Customs (CBIC)",
+    "documents": [
+      "GSTIN",
+      "Invoice details in prescribed format",
+      "Aadhaar-verified digital signature"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "e-invoice",
+      "irn",
+      "qr code",
+      "gst invoice",
+      "einvoice",
+      "b2b invoice",
+      "cbic"
+    ]
+  },
+  {
+    "id": "13",
+    "service_name": "Custom Duty Payment (ICEGATE)",
+    "category": "Tax & Finance",
+    "description": "File import/export customs declarations (Bills of Entry, Shipping Bills), pay customs duty, and access DGFT services through the Indian Customs EDI Gateway.",
+    "url": "https://www.icegate.gov.in",
+    "ministry": "Ministry of Finance – Central Board of Indirect Taxes & Customs (CBIC)",
+    "documents": [
+      "IEC (Importer Exporter Code)",
+      "GSTIN",
+      "Invoice and Packing List",
+      "Bill of Lading / Airway Bill"
+    ],
+    "processing_time": "1-5 working days",
+    "fee": "As per customs tariff (duty rates vary by HS code)",
+    "tags": [
+      "customs duty",
+      "import",
+      "export",
+      "icegate",
+      "bill of entry",
+      "shipping bill",
+      "cbic",
+      "iec",
+      "customs clearance"
+    ]
+  },
+  {
+    "id": "14",
+    "service_name": "Voter ID / EPIC Card Registration",
+    "category": "Electoral",
+    "description": "Register as a new voter, update your existing voter registration, request a duplicate EPIC card, or shift your voter registration to a new address on the National Voters' Services Portal.",
+    "url": "https://voterportal.eci.gov.in",
+    "ministry": "Election Commission of India",
+    "documents": [
+      "Age Proof (Birth Certificate / Class 10 Certificate)",
+      "Address Proof (Aadhaar / Utility Bill)",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "15-30 days",
+    "fee": "Free",
+    "tags": [
+      "voter id",
+      "epic card",
+      "electoral roll",
+      "election",
+      "vote",
+      "voter registration",
+      "eci",
+      "nvsp",
+      "booth level officer"
+    ]
+  },
+  {
+    "id": "15",
+    "service_name": "Candidate Affidavit & Nomination Filing (ECI)",
+    "category": "Electoral",
+    "description": "Submit nomination papers, file affidavit of assets & liabilities, and manage election-related disclosures for candidates contesting elections in India.",
+    "url": "https://affidavit.eci.gov.in",
+    "ministry": "Election Commission of India",
+    "documents": [
+      "Voter ID",
+      "PAN Card",
+      "Affidavit (Form 26)",
+      "Asset and Liability Declaration"
+    ],
+    "processing_time": "As per election schedule",
+    "fee": "₹10,000 (Lok Sabha deposit), ₹5,000 (Vidhan Sabha deposit)",
+    "tags": [
+      "election",
+      "nomination",
+      "candidate",
+      "affidavit",
+      "eci",
+      "mcc",
+      "lok sabha",
+      "vidhan sabha",
+      "assets declaration"
+    ]
+  },
+  {
+    "id": "16",
+    "service_name": "Driving Licence (New / Renewal / Duplicate)",
+    "category": "Transport",
+    "description": "Apply for a learner's licence, permanent driving licence, renewal of expired licence, international driving permit, or duplicate licence through the Sarathi portal.",
+    "url": "https://sarathi.parivahan.gov.in",
+    "ministry": "Ministry of Road Transport & Highways",
+    "documents": [
+      "Aadhaar Card",
+      "Age Proof (Birth Certificate / Passport)",
+      "Proof of Address",
+      "Medical Certificate (Form 1-A for heavy vehicle)",
+      "Learner's Licence (for permanent DL)"
+    ],
+    "processing_time": "7-30 days (after passing driving test)",
+    "fee": "₹200 (LL), ₹400-₹1000 (DL, varies by category)",
+    "tags": [
+      "driving licence",
+      "learner licence",
+      "dl renewal",
+      "idp",
+      "sarathi",
+      "rto",
+      "transport",
+      "licence test",
+      "heavy vehicle"
+    ]
+  },
+  {
+    "id": "17",
+    "service_name": "Vehicle Registration (RC) & Transfer",
+    "category": "Transport",
+    "description": "Register a new vehicle, obtain or renew Registration Certificate (RC), transfer ownership, apply for NOC, add hypothecation, or obtain a duplicate RC through the Vahan portal.",
+    "url": "https://vahan.parivahan.gov.in",
+    "ministry": "Ministry of Road Transport & Highways",
+    "documents": [
+      "Vehicle Invoice / Form 22",
+      "Insurance Certificate (valid)",
+      "Aadhaar Card",
+      "PAN Card (for vehicles above ₹10 lakh)",
+      "Form 20 (for new registration)"
+    ],
+    "processing_time": "7-15 days",
+    "fee": "₹300-₹10,000 (varies by vehicle category and state)",
+    "tags": [
+      "vehicle registration",
+      "rc",
+      "rc renewal",
+      "noc",
+      "hypothecation",
+      "vahan",
+      "transfer of ownership",
+      "car registration",
+      "bike",
+      "fasttag"
+    ]
+  },
+  {
+    "id": "18",
+    "service_name": "FASTag Registration & Recharge",
+    "category": "Transport",
+    "description": "Apply for a FASTag RFID sticker for electronic toll collection, link it to your bank account, recharge balance, and manage your National Electronic Toll Collection account.",
+    "url": "https://www.netc.org.in",
+    "ministry": "Ministry of Road Transport & Highways",
+    "documents": [
+      "Vehicle Registration Certificate (RC)",
+      "Aadhaar Card",
+      "Vehicle Photo (front with number plate)",
+      "Bank Account Details for auto-debit"
+    ],
+    "processing_time": "2-7 days (delivery)",
+    "fee": "₹100-₹200 (security deposit depending on vehicle class) + recharge amount",
+    "tags": [
+      "fastag",
+      "toll",
+      "netc",
+      "electronic toll",
+      "rfid",
+      "national highways",
+      "nhai",
+      "toll plaza",
+      "recharge"
+    ]
+  },
+  {
+    "id": "19",
+    "service_name": "Pollution Under Control (PUC) Certificate",
+    "category": "Transport",
+    "description": "Verify vehicle emission standards compliance. Check PUC certificate validity and find authorised PUC testing centres on the official Parivahan portal.",
+    "url": "https://vahan.parivahan.gov.in",
+    "ministry": "Ministry of Road Transport & Highways",
+    "documents": [
+      "Vehicle Registration Certificate (RC)",
+      "Previous PUC Certificate"
+    ],
+    "processing_time": "Same day (at authorised centre)",
+    "fee": "₹60-₹100 (varies by vehicle type and state)",
+    "tags": [
+      "puc",
+      "pollution certificate",
+      "emission",
+      "vehicle fitness",
+      "vahan",
+      "rto",
+      "environment",
+      "bs6"
+    ]
+  },
+  {
+    "id": "20",
+    "service_name": "Birth Certificate",
+    "category": "Civil Registration",
+    "description": "Register a birth and obtain an official government-issued birth certificate, essential for school admission, passport, Aadhaar enrollment, and availing government benefits.",
+    "url": "https://crsorgi.gov.in",
+    "ministry": "Office of the Registrar General of India – Ministry of Home Affairs",
+    "documents": [
+      "Hospital / Institutional Birth Record (Form 1)",
+      "Parent's Aadhaar Card",
+      "Parent's Marriage Certificate",
+      "Parent's Address Proof"
+    ],
+    "processing_time": "7-21 days",
+    "fee": "₹5-₹50 (varies by state and time of registration)",
+    "tags": [
+      "birth certificate",
+      "birth registration",
+      "civil registration",
+      "newborn",
+      "hospital birth",
+      "rgi",
+      "municipal birth"
+    ]
+  },
+  {
+    "id": "21",
+    "service_name": "Death Certificate",
+    "category": "Civil Registration",
+    "description": "Register a death and obtain an official death certificate, required for inheritance claims, insurance settlement, bank account closure, and government pension discontinuation.",
+    "url": "https://crsorgi.gov.in",
+    "ministry": "Office of the Registrar General of India – Ministry of Home Affairs",
+    "documents": [
+      "Hospital / Doctor's Death Declaration (Form 2)",
+      "Deceased's Identity Proof",
+      "Informant's Aadhaar Card",
+      "Address Proof"
+    ],
+    "processing_time": "7-21 days",
+    "fee": "₹5-₹50 (varies by state and time of registration)",
+    "tags": [
+      "death certificate",
+      "death registration",
+      "civil registration",
+      "obituary",
+      "succession",
+      "rgi",
+      "inheritance"
+    ]
+  },
+  {
+    "id": "22",
+    "service_name": "Marriage Registration & Certificate",
+    "category": "Civil Registration",
+    "description": "Register marriage under Hindu Marriage Act 1955 or Special Marriage Act 1954 and obtain a government-issued marriage certificate recognised for all legal and official purposes.",
+    "url": "https://services.india.gov.in",
+    "ministry": "State Revenue / Urban Local Body Department",
+    "documents": [
+      "Age Proof of Both Parties (Passport / Birth Certificate)",
+      "Address Proof of Both Parties",
+      "Aadhaar Cards of Both Parties",
+      "Wedding Photographs",
+      "Two Witness ID Proofs"
+    ],
+    "processing_time": "15-30 days",
+    "fee": "₹100-₹500 (varies by state)",
+    "tags": [
+      "marriage certificate",
+      "marriage registration",
+      "hindu marriage act",
+      "special marriage act",
+      "wedding",
+      "matrimony",
+      "spousal document"
+    ]
+  },
+  {
+    "id": "23",
+    "service_name": "Domicile / Residence Certificate",
+    "category": "Civil Registration",
+    "description": "Obtain a state-issued domicile or residence certificate required for state quota reservations in education, employment, and government schemes.",
+    "url": "https://services.india.gov.in",
+    "ministry": "State Revenue Department",
+    "documents": [
+      "Aadhaar Card",
+      "Proof of continuous residence in state (utility bills / voter ID)",
+      "Ration Card",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "7-15 days",
+    "fee": "₹20-₹100 (varies by state)",
+    "tags": [
+      "domicile certificate",
+      "residence certificate",
+      "state domicile",
+      "bonafide",
+      "local resident",
+      "state quota"
+    ]
+  },
+  {
+    "id": "24",
+    "service_name": "Caste Certificate (SC / ST / OBC)",
+    "category": "State Services",
+    "description": "Obtain a Scheduled Caste, Scheduled Tribe, or Other Backward Classes caste certificate required for reservation benefits in education, government employment, and welfare schemes.",
+    "url": "https://services.india.gov.in",
+    "ministry": "State Social Welfare / Revenue Department",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Parent's Caste Certificate or School Leaving Certificate",
+      "Address Proof",
+      "Income Certificate (for OBC)"
+    ],
+    "processing_time": "15-30 days",
+    "fee": "₹10-₹50 (varies by state)",
+    "tags": [
+      "caste certificate",
+      "sc certificate",
+      "st certificate",
+      "obc certificate",
+      "reservation",
+      "backward class",
+      "social welfare"
+    ]
+  },
+  {
+    "id": "25",
+    "service_name": "Income Certificate",
+    "category": "State Services",
+    "description": "Obtain an annual income certificate issued by the revenue department, required for availing government subsidies, reservations, welfare schemes, and educational fee concessions.",
+    "url": "https://services.india.gov.in",
+    "ministry": "State Revenue Department",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Salary Slip or Self-Declaration Form",
+      "Bank Passbook (last 6 months)",
+      "Address Proof"
+    ],
+    "processing_time": "7-15 days",
+    "fee": "₹20-₹100 (varies by state)",
+    "tags": [
+      "income certificate",
+      "annual income",
+      "income proof",
+      "ews certificate",
+      "subsidy",
+      "welfare",
+      "fee concession"
+    ]
+  },
+  {
+    "id": "26",
+    "service_name": "Ration Card (New / Update / Surrender)",
+    "category": "Food & Civil Supplies",
+    "description": "Apply for a new ration card (AAY / PHH / NPHH), update family member details, change address, or surrender an existing card under the National Food Security Act.",
+    "url": "https://dfpd.gov.in",
+    "ministry": "Ministry of Consumer Affairs, Food & Public Distribution",
+    "documents": [
+      "Aadhaar Cards of All Family Members",
+      "Proof of Address",
+      "Income Certificate",
+      "Passport-size Photographs",
+      "Surrender Certificate (if moving from another state)"
+    ],
+    "processing_time": "30-45 days",
+    "fee": "₹5-₹45 (varies by state)",
+    "tags": [
+      "ration card",
+      "nfsa",
+      "pds",
+      "public distribution system",
+      "subsidised food",
+      "bpl card",
+      "aay",
+      "phh",
+      "food security"
+    ]
+  },
+  {
+    "id": "27",
+    "service_name": "One Nation One Ration Card (ONORC)",
+    "category": "Food & Civil Supplies",
+    "description": "Access your ration card benefits from any Fair Price Shop anywhere in India using Aadhaar-based biometric verification under the One Nation One Ration Card scheme.",
+    "url": "https://onorc.gov.in",
+    "ministry": "Ministry of Consumer Affairs, Food & Public Distribution",
+    "documents": [
+      "Aadhaar Card (linked to ration card)",
+      "Existing Ration Card Number"
+    ],
+    "processing_time": "Instant (if already linked)",
+    "fee": "Free",
+    "tags": [
+      "one nation one ration card",
+      "onorc",
+      "portability",
+      "ration portability",
+      "migrant workers",
+      "pds",
+      "fair price shop"
+    ]
+  },
+  {
+    "id": "28",
+    "service_name": "PM Kisan Samman Nidhi",
+    "category": "Agriculture & Farmers",
+    "description": "Receive ₹6,000 annual income support in three equal installments of ₹2,000 each directly to bank accounts of eligible small and marginal farmer families.",
+    "url": "https://pmkisan.gov.in",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "documents": [
+      "Aadhaar Card",
+      "Land Ownership Records (Khasra / Khatauni)",
+      "Bank Account Details (linked to Aadhaar)",
+      "Mobile Number"
+    ],
+    "processing_time": "30-90 days (first installment after registration)",
+    "fee": "Free",
+    "tags": [
+      "pm kisan",
+      "kisan samman nidhi",
+      "farmer income",
+      "agriculture subsidy",
+      "installment",
+      "small farmer",
+      "marginal farmer",
+      "6000"
+    ]
+  },
+  {
+    "id": "29",
+    "service_name": "PM Fasal Bima Yojana (Crop Insurance)",
+    "category": "Agriculture & Farmers",
+    "description": "Enroll in the Pradhan Mantri Fasal Bima Yojana (PMFBY) for financial support to farmers in case of crop failure due to natural calamities, pests, or diseases.",
+    "url": "https://pmfby.gov.in",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "documents": [
+      "Aadhaar Card",
+      "Land Records (Khasra / Patwari Certificate)",
+      "Bank Passbook",
+      "Sowing Certificate",
+      "Loan Account Number (if applicable)"
+    ],
+    "processing_time": "15-30 days (enrollment); claims vary",
+    "fee": "2% premium for Kharif crops, 1.5% for Rabi crops, 5% for commercial crops",
+    "tags": [
+      "fasal bima",
+      "crop insurance",
+      "pmfby",
+      "natural disaster",
+      "crop failure",
+      "kisan",
+      "agriculture insurance",
+      "kharif",
+      "rabi"
+    ]
+  },
+  {
+    "id": "30",
+    "service_name": "Kisan Credit Card (KCC)",
+    "category": "Agriculture & Farmers",
+    "description": "Apply for a Kisan Credit Card providing revolving credit up to ₹3 lakh at subsidised interest rates for crop cultivation, post-harvest expenses, and allied agricultural activities.",
+    "url": "https://www.nabard.org",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "documents": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Land Ownership / Tenancy Documents",
+      "Passport-size Photograph",
+      "Loan Application Form"
+    ],
+    "processing_time": "7-14 days",
+    "fee": "Free (processing fee at bank may vary)",
+    "tags": [
+      "kisan credit card",
+      "kcc",
+      "farm loan",
+      "agriculture credit",
+      "revolving credit",
+      "crop loan",
+      "interest subvention"
+    ]
+  },
+  {
+    "id": "31",
+    "service_name": "eNAM – National Agriculture Market",
+    "category": "Agriculture & Farmers",
+    "description": "Register as a farmer, trader, or FPO on the unified national electronic trading portal for agricultural commodities to access pan-India market prices and buyers.",
+    "url": "https://enam.gov.in",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Land / Farmer Registration Details",
+      "APMC Registration (for traders)",
+      "FPO Certificate (for FPOs)"
+    ],
+    "processing_time": "Instant (registration)",
+    "fee": "Free (platform charges vary per APMC)",
+    "tags": [
+      "enam",
+      "national agriculture market",
+      "apmc",
+      "mandi",
+      "online trading",
+      "commodity price",
+      "farmer market",
+      "fpo",
+      "agri market"
+    ]
+  },
+  {
+    "id": "32",
+    "service_name": "Soil Health Card",
+    "category": "Agriculture & Farmers",
+    "description": "Get your agricultural land's soil tested for nutrient status and receive a Soil Health Card with crop-wise fertilizer recommendations to improve soil health and yield.",
+    "url": "https://soilhealth.dac.gov.in",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "documents": [
+      "Aadhaar Card",
+      "Land Records / Survey Number",
+      "Mobile Number"
+    ],
+    "processing_time": "7-30 days",
+    "fee": "Free",
+    "tags": [
+      "soil health card",
+      "soil testing",
+      "fertilizer recommendation",
+      "npk",
+      "micro nutrients",
+      "agriculture",
+      "crop yield",
+      "kisan"
+    ]
+  },
+  {
+    "id": "33",
+    "service_name": "PM Kisan Maan Dhan Yojana (Farmers' Pension)",
+    "category": "Agriculture & Farmers",
+    "description": "Register for the Pradhan Mantri Kisan Maan Dhan Yojana to receive a minimum pension of ₹3,000 per month after the age of 60 for small and marginal farmers.",
+    "url": "https://maandhan.in",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details (linked to Aadhaar)",
+      "Land Records",
+      "Age Proof (18-40 years)"
+    ],
+    "processing_time": "Instant (enrollment at CSC)",
+    "fee": "₹55-₹200 per month (contribution varies by entry age)",
+    "tags": [
+      "kisan pension",
+      "maan dhan",
+      "pm kisan maandhan",
+      "farmer retirement",
+      "pension scheme",
+      "small farmer",
+      "60 years"
+    ]
+  },
+  {
+    "id": "34",
+    "service_name": "Ayushman Bharat PM-JAY (ABHA Health ID)",
+    "category": "Health",
+    "description": "Enroll for Ayushman Bharat Pradhan Mantri Jan Arogya Yojana providing cashless health insurance coverage up to ₹5 lakh per family per year at empanelled hospitals.",
+    "url": "https://pmjay.gov.in",
+    "ministry": "Ministry of Health & Family Welfare",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card / SECC Data Identification",
+      "Mobile Number"
+    ],
+    "processing_time": "Instant to 7 days",
+    "fee": "Free",
+    "tags": [
+      "ayushman bharat",
+      "pmjay",
+      "health insurance",
+      "cashless treatment",
+      "5 lakh",
+      "hospital",
+      "abha",
+      "golden card",
+      "secondary care",
+      "tertiary care"
+    ]
+  },
+  {
+    "id": "35",
+    "service_name": "ABHA Health Account (Ayushman Bharat Health Account)",
+    "category": "Health",
+    "description": "Create a unique Ayushman Bharat Health Account (ABHA) ID for a digital health record linked to all your medical history, prescriptions, and lab reports under the National Digital Health Mission.",
+    "url": "https://abha.abdm.gov.in",
+    "ministry": "Ministry of Health & Family Welfare – NHA",
+    "documents": [
+      "Aadhaar Card",
+      "Mobile Number linked to Aadhaar"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "abha",
+      "health id",
+      "digital health",
+      "ndhm",
+      "abdm",
+      "health records",
+      "medical history",
+      "ayushman bharat",
+      "nha"
+    ]
+  },
+  {
+    "id": "36",
+    "service_name": "Jan Aushadhi – Affordable Medicines",
+    "category": "Health",
+    "description": "Locate nearest Pradhan Mantri Jan Aushadhi Kendra to buy high-quality generic medicines at prices 50-90% lower than branded medicines. Register to open a new outlet.",
+    "url": "https://www.janaushadhi.gov.in",
+    "ministry": "Ministry of Chemicals & Fertilizers – BPPI",
+    "documents": [
+      "Aadhaar Card",
+      "Pharmacy Registration Certificate (for opening outlet)",
+      "Shop Lease Agreement (for outlet)",
+      "Bank Account Details"
+    ],
+    "processing_time": "30-60 days (outlet registration)",
+    "fee": "Free (using the service); ₹5,000 registration for outlet",
+    "tags": [
+      "jan aushadhi",
+      "generic medicines",
+      "affordable medicine",
+      "pmbjp",
+      "pharmacy",
+      "bppi",
+      "kendra",
+      "medicine store"
+    ]
+  },
+  {
+    "id": "37",
+    "service_name": "CGHS – Central Government Health Scheme",
+    "category": "Health",
+    "description": "Register for CGHS to avail comprehensive healthcare facilities including OPD, indoor treatment, specialist consultation, and medicines for central government employees and pensioners.",
+    "url": "https://www.cghs.gov.in",
+    "ministry": "Ministry of Health & Family Welfare",
+    "documents": [
+      "Government Employee ID / Pensioner PPO",
+      "Aadhaar Card",
+      "Service Certificate",
+      "Family Members' Proof",
+      "Passport-size Photographs"
+    ],
+    "processing_time": "7-30 days (card issuance)",
+    "fee": "₹250-₹1000 per month (varies by pay scale)",
+    "tags": [
+      "cghs",
+      "central government health",
+      "government employee health",
+      "pensioner health",
+      "dispensary",
+      "wellness centre"
+    ]
+  },
+  {
+    "id": "38",
+    "service_name": "National Health Portal – Health Information",
+    "category": "Health",
+    "description": "Access comprehensive health information, locate blood banks and hospitals, find government health schemes, and access citizen health services through India's official health information gateway.",
+    "url": "https://www.nhp.gov.in",
+    "ministry": "Ministry of Health & Family Welfare",
+    "documents": [
+      "None required (information portal)"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "health information",
+      "nhp",
+      "blood bank",
+      "hospital locator",
+      "health schemes",
+      "nhm",
+      "citizen health",
+      "medical information"
+    ]
+  },
+  {
+    "id": "39",
+    "service_name": "Pradhan Mantri Awas Yojana – Urban (PMAY-U)",
+    "category": "Housing & Urban Development",
+    "description": "Apply for housing assistance under PMAY-Urban for EWS/LIG/MIG categories including Credit Linked Subsidy Scheme (CLSS) and beneficiary-led construction.",
+    "url": "https://pmaymis.gov.in",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "documents": [
+      "Aadhaar Card",
+      "Income Certificate (household annual income)",
+      "Bank Account Details",
+      "Property Documents / Allotment Letter",
+      "Self-Declaration of No Property"
+    ],
+    "processing_time": "3-6 months (approval to subsidy disbursement)",
+    "fee": "Free",
+    "tags": [
+      "pmay",
+      "affordable housing",
+      "clss",
+      "home loan subsidy",
+      "ews",
+      "lig",
+      "mig",
+      "housing scheme",
+      "urban housing"
+    ]
+  },
+  {
+    "id": "40",
+    "service_name": "Pradhan Mantri Awas Yojana – Gramin (PMAY-G)",
+    "category": "Housing & Urban Development",
+    "description": "Apply for housing assistance under PMAY-Gramin for construction of pucca houses for homeless families in rural areas, with direct benefit transfer to beneficiaries.",
+    "url": "https://pmayg.nic.in",
+    "ministry": "Ministry of Rural Development",
+    "documents": [
+      "Aadhaar Card",
+      "SECC 2011 Data Inclusion (BPL list)",
+      "Bank Account Details",
+      "Land Ownership Documents",
+      "Village Panchayat Recommendation"
+    ],
+    "processing_time": "1-2 years (construction completion)",
+    "fee": "Free",
+    "tags": [
+      "pmay gramin",
+      "rural housing",
+      "pucca house",
+      "bpl housing",
+      "iay",
+      "rural development",
+      "AwaaS+"
+    ]
+  },
+  {
+    "id": "41",
+    "service_name": "Smart Cities Mission",
+    "category": "Housing & Urban Development",
+    "description": "Access information, track projects, and avail citizen services under the Smart Cities Mission for 100 selected cities being developed with smart infrastructure and technology.",
+    "url": "https://smartcities.gov.in",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "documents": [
+      "None required (information and tracking portal)"
+    ],
+    "processing_time": "Varies by city and service",
+    "fee": "Free",
+    "tags": [
+      "smart cities",
+      "urban development",
+      "smart infrastructure",
+      "technology",
+      "city services",
+      "urban transformation",
+      "mohua"
+    ]
+  },
+  {
+    "id": "42",
+    "service_name": "AMRUT – Urban Infrastructure Services",
+    "category": "Housing & Urban Development",
+    "description": "Track and access water supply, sewerage, drainage, urban transport, and green space development projects under the Atal Mission for Rejuvenation and Urban Transformation.",
+    "url": "https://amrut.gov.in",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "documents": [
+      "None required (information portal)"
+    ],
+    "processing_time": "Varies by municipality",
+    "fee": "Free",
+    "tags": [
+      "amrut",
+      "urban infrastructure",
+      "water supply",
+      "sewerage",
+      "drainage",
+      "urban transport",
+      "atal mission"
+    ]
+  },
+  {
+    "id": "43",
+    "service_name": "EPFO – PF Account Management & Withdrawal",
+    "category": "Labour & Employment",
+    "description": "Activate UAN, withdraw or transfer PF balance, claim pension benefits, file joint declaration, update KYC, and manage all EPFO services online through the unified portal.",
+    "url": "https://www.epfindia.gov.in",
+    "ministry": "Ministry of Labour & Employment – EPFO",
+    "documents": [
+      "Universal Account Number (UAN)",
+      "Aadhaar Card (linked to UAN)",
+      "Bank Account Details (linked to UAN)",
+      "Cancelled Cheque",
+      "PAN Card"
+    ],
+    "processing_time": "15-20 working days (PF withdrawal)",
+    "fee": "Free",
+    "tags": [
+      "pf",
+      "provident fund",
+      "epfo",
+      "uan",
+      "withdrawal",
+      "eps pension",
+      "form 19",
+      "form 10c",
+      "kisan vikas",
+      "form 31"
+    ]
+  },
+  {
+    "id": "44",
+    "service_name": "ESIC – Employees' State Insurance Services",
+    "category": "Labour & Employment",
+    "description": "Register as an employer/employee under ESIC, access medical benefits, maternity benefits, disablement benefits, and file ESI contribution returns online.",
+    "url": "https://www.esic.gov.in",
+    "ministry": "Ministry of Labour & Employment – ESIC",
+    "documents": [
+      "Aadhaar Card",
+      "Employer Registration Number",
+      "Employee's IP (Insurance Person) Number",
+      "Salary Details",
+      "Bank Account Details"
+    ],
+    "processing_time": "7-15 days (registration)",
+    "fee": "Employer: 3.25% of wages; Employee: 0.75% of wages",
+    "tags": [
+      "esi",
+      "esic",
+      "employee state insurance",
+      "medical benefit",
+      "maternity benefit",
+      "injury benefit",
+      "esi card",
+      "employer registration"
+    ]
+  },
+  {
+    "id": "45",
+    "service_name": "e-Shram Card – Unorganised Workers Registration",
+    "category": "Labour & Employment",
+    "description": "Register on the National Database of Unorganised Workers (NDUW) to avail social security benefits including accident insurance of ₹2 lakh and welfare scheme linkage.",
+    "url": "https://eshram.gov.in",
+    "ministry": "Ministry of Labour & Employment",
+    "documents": [
+      "Aadhaar Card",
+      "Aadhaar-linked Mobile Number",
+      "Bank Account Details",
+      "IFSC Code"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "eshram",
+      "unorganised worker",
+      "nduw",
+      "labour card",
+      "accident insurance",
+      "social security",
+      "construction worker",
+      "migrant worker"
+    ]
+  },
+  {
+    "id": "46",
+    "service_name": "National Career Service (NCS) – Job Portal",
+    "category": "Labour & Employment",
+    "description": "Register as a job seeker, upload resume, apply for government and private sector jobs, find apprenticeship opportunities, and access skill development programs on India's national employment portal.",
+    "url": "https://www.ncs.gov.in",
+    "ministry": "Ministry of Labour & Employment",
+    "documents": [
+      "Aadhaar Card",
+      "Educational Certificates",
+      "Work Experience Proof (if applicable)",
+      "Resume / CV"
+    ],
+    "processing_time": "Instant (registration)",
+    "fee": "Free",
+    "tags": [
+      "ncs",
+      "job portal",
+      "employment",
+      "job seeker",
+      "placement",
+      "career",
+      "government jobs",
+      "private jobs",
+      "resume",
+      "apprenticeship"
+    ]
+  },
+  {
+    "id": "47",
+    "service_name": "PM Shram Yogi Maan-Dhan (PM-SYM) Pension",
+    "category": "Labour & Employment",
+    "description": "Enroll in PM-SYM pension scheme for unorganised sector workers to receive a guaranteed monthly pension of ₹3,000 after the age of 60 with minimal monthly contribution.",
+    "url": "https://maandhan.in",
+    "ministry": "Ministry of Labour & Employment",
+    "documents": [
+      "Aadhaar Card",
+      "Aadhaar-linked Mobile Number",
+      "Savings Bank Account Details",
+      "Age Proof (18-40 years)"
+    ],
+    "processing_time": "Instant (at CSC or online)",
+    "fee": "₹55-₹200 per month (varies by age of entry)",
+    "tags": [
+      "pm-sym",
+      "shram yogi maandhan",
+      "unorganised worker pension",
+      "pension scheme",
+      "3000 pension",
+      "csc",
+      "maandhan",
+      "retirement"
+    ]
+  },
+  {
+    "id": "48",
+    "service_name": "Apprenticeship Registration (NATS / BOAT)",
+    "category": "Labour & Employment",
+    "description": "Register as an apprentice or employer under the National Apprenticeship Training Scheme. Students can apply for apprenticeships, employers can list openings, and industries can manage stipends.",
+    "url": "https://www.apprenticeship.gov.in",
+    "ministry": "Ministry of Education / Ministry of Skill Development & Entrepreneurship",
+    "documents": [
+      "Aadhaar Card",
+      "Educational Qualification Certificates",
+      "ITI / Diploma Certificate (for trade apprentice)",
+      "Employer Registration Number (for employers)"
+    ],
+    "processing_time": "Varies by employer",
+    "fee": "Free",
+    "tags": [
+      "apprenticeship",
+      "nats",
+      "boat",
+      "on-the-job training",
+      "trade apprentice",
+      "graduate apprentice",
+      "stipend",
+      "industry training"
+    ]
+  },
+  {
+    "id": "49",
+    "service_name": "National Scholarship Portal (NSP)",
+    "category": "Education",
+    "description": "Apply for over 100 central government and state government scholarship schemes for pre-matric, post-matric, and merit-based scholarships for SC/ST/OBC/Minority and EWS students.",
+    "url": "https://scholarships.gov.in",
+    "ministry": "Ministry of Education – National Scholarship Portal",
+    "documents": [
+      "Aadhaar Card",
+      "Income Certificate (family)",
+      "Caste Certificate (for category scholarships)",
+      "Previous Year Marksheets",
+      "Bank Account Details (in student's name)",
+      "Institution Verification"
+    ],
+    "processing_time": "30-90 days",
+    "fee": "Free",
+    "tags": [
+      "nsp",
+      "scholarship",
+      "student financial aid",
+      "pre-matric",
+      "post-matric",
+      "minority scholarship",
+      "merit scholarship",
+      "sc st obc scholarship",
+      "education grant"
+    ]
+  },
+  {
+    "id": "50",
+    "service_name": "SAMARTH – Unified University Management System",
+    "category": "Education",
+    "description": "ERP platform for central universities offering student services including admissions, examination management, result publication, fee payment, and certificate issuance.",
+    "url": "https://www.samarth.edu.in",
+    "ministry": "Ministry of Education",
+    "documents": [
+      "Admission letter",
+      "Aadhaar Card",
+      "Previous Academic Records",
+      "Photo ID"
+    ],
+    "processing_time": "As per university schedule",
+    "fee": "Varies by institution and service",
+    "tags": [
+      "samarth",
+      "university portal",
+      "central university",
+      "student portal",
+      "admission",
+      "examination",
+      "result",
+      "university management"
+    ]
+  },
+  {
+    "id": "51",
+    "service_name": "UDISE+ – School Education Data",
+    "category": "Education",
+    "description": "Unified District Information System for Education Plus (UDISE+) provides data on all school infrastructure, teacher information, and student enrollment across India.",
+    "url": "https://udiseplus.gov.in",
+    "ministry": "Ministry of Education – Department of School Education",
+    "documents": [
+      "School DISE Code (for school data entry)",
+      "None required (for public lookup)"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "udise",
+      "school data",
+      "education statistics",
+      "school infrastructure",
+      "enrollment",
+      "teacher data",
+      "district education"
+    ]
+  },
+  {
+    "id": "52",
+    "service_name": "NTA – JEE Main Examination",
+    "category": "Education",
+    "description": "Apply for the Joint Entrance Examination (JEE) Main conducted by NTA for admission to NITs, IIITs, CFTIs, and other engineering institutions.",
+    "url": "https://jeemain.nta.nic.in",
+    "ministry": "Ministry of Education – National Testing Agency",
+    "documents": [
+      "Class 10 and 12 Marksheets",
+      "Aadhaar Card / Passport",
+      "Category Certificate (if applicable)",
+      "Passport-size Photograph",
+      "Scanned Signature"
+    ],
+    "processing_time": "Varies (admission based on JEE scores)",
+    "fee": "₹650-₹1300 (varies by category and paper)",
+    "tags": [
+      "jee main",
+      "nta",
+      "engineering entrance",
+      "nit",
+      "iiit",
+      "b.tech admission",
+      "joint entrance exam",
+      "cbse"
+    ]
+  },
+  {
+    "id": "53",
+    "service_name": "NTA – NEET-UG Examination",
+    "category": "Education",
+    "description": "Apply for the National Eligibility cum Entrance Test (NEET-UG) conducted by NTA for admission to MBBS, BDS, BAMS, BSMS, BUMS, and BHMS programs across India.",
+    "url": "https://neet.nta.nic.in",
+    "ministry": "Ministry of Education – National Testing Agency",
+    "documents": [
+      "Class 10 and 12 Marksheets (PCB)",
+      "Aadhaar Card / Passport",
+      "Category Certificate (if applicable)",
+      "Passport-size Photograph",
+      "Scanned Signature"
+    ],
+    "processing_time": "Varies (admission based on NEET scores)",
+    "fee": "₹1600-₹2000 (varies by category)",
+    "tags": [
+      "neet",
+      "medical entrance",
+      "mbbs admission",
+      "bds",
+      "ayush",
+      "nta",
+      "national eligibility",
+      "pcb",
+      "medical college"
+    ]
+  },
+  {
+    "id": "54",
+    "service_name": "UGC – University Grants Commission Services",
+    "category": "Education",
+    "description": "Access UGC approved university and college list, apply for NET fellowship, verify fake university list, access approved program list, and UGC scholarship programs.",
+    "url": "https://www.ugc.gov.in",
+    "ministry": "Ministry of Education – University Grants Commission",
+    "documents": [
+      "None required (information portal)",
+      "Eligibility documents for UGC-NET application"
+    ],
+    "processing_time": "Varies by service",
+    "fee": "Free (information); UGC-NET fee: ₹1000-₹1600",
+    "tags": [
+      "ugc",
+      "university grants",
+      "ugc net",
+      "approved university",
+      "fake university",
+      "college accreditation",
+      "higher education"
+    ]
+  },
+  {
+    "id": "55",
+    "service_name": "MSME Udyam Registration",
+    "category": "Business & MSME",
+    "description": "Register your Micro, Small, or Medium Enterprise on the Udyam portal to get MSME status, access credit guarantees, government tenders, and financial subsidies.",
+    "url": "https://udyamregistration.gov.in",
+    "ministry": "Ministry of Micro, Small & Medium Enterprises",
+    "documents": [
+      "Aadhaar Card (of proprietor / authorized signatory)",
+      "PAN Card (of enterprise)",
+      "GSTIN (if applicable)",
+      "Bank Account Details"
+    ],
+    "processing_time": "Instant (certificate generated online)",
+    "fee": "Free",
+    "tags": [
+      "msme",
+      "udyam registration",
+      "udyam certificate",
+      "small business",
+      "medium enterprise",
+      "micro enterprise",
+      "startup",
+      "dpiit"
+    ]
+  },
+  {
+    "id": "56",
+    "service_name": "Startup India Registration (DPIIT Recognition)",
+    "category": "Business & MSME",
+    "description": "Get DPIIT recognition for your startup to access tax exemptions (Section 80-IAC), self-certification compliance, patent fee rebates, and government scheme benefits.",
+    "url": "https://www.startupindia.gov.in",
+    "ministry": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+    "documents": [
+      "Certificate of Incorporation / Registration",
+      "PAN Card of the Entity",
+      "Brief description of innovative product/service",
+      "Director / Founder Aadhaar Cards"
+    ],
+    "processing_time": "2-15 days",
+    "fee": "Free",
+    "tags": [
+      "startup india",
+      "dpiit recognition",
+      "startup registration",
+      "tax exemption",
+      "80-iac",
+      "startup certificate",
+      "innovation",
+      "incubation"
+    ]
+  },
+  {
+    "id": "57",
+    "service_name": "GeM – Government e-Marketplace",
+    "category": "Business & MSME",
+    "description": "Register as a seller on Government e-Marketplace to supply goods and services to central and state government buyers, departments, and PSUs through a transparent online procurement system.",
+    "url": "https://gem.gov.in",
+    "ministry": "Ministry of Commerce & Industry – DPIIT",
+    "documents": [
+      "Aadhaar Card",
+      "PAN Card",
+      "GSTIN",
+      "Bank Account Details",
+      "Udyam Registration Certificate (preferred)",
+      "MSMEregistration (for MSMEs)"
+    ],
+    "processing_time": "3-7 days (seller registration)",
+    "fee": "Free",
+    "tags": [
+      "gem",
+      "government marketplace",
+      "government procurement",
+      "seller registration",
+      "buyer",
+      "public procurement",
+      "vendor",
+      "e-tender"
+    ]
+  },
+  {
+    "id": "58",
+    "service_name": "Company Incorporation (MCA-21)",
+    "category": "Business & MSME",
+    "description": "Incorporate a company (Private Limited, Public Limited, OPC, LLP), file annual returns, update director details, and access all Ministry of Corporate Affairs services through MCA-21.",
+    "url": "https://www.mca.gov.in",
+    "ministry": "Ministry of Corporate Affairs",
+    "documents": [
+      "Director's PAN Card and Aadhaar Card",
+      "Proposed Company Name",
+      "Memorandum and Articles of Association (MoA / AoA)",
+      "Registered Office Proof",
+      "DSC of Directors"
+    ],
+    "processing_time": "7-15 days",
+    "fee": "₹1,000-₹10,000 (varies by authorized share capital)",
+    "tags": [
+      "mca",
+      "company registration",
+      "pvt ltd",
+      "llp",
+      "opc",
+      "incorporation",
+      "cin",
+      "directors",
+      "roc",
+      "annual return",
+      "mca21"
+    ]
+  },
+  {
+    "id": "59",
+    "service_name": "IP India – Patent & Trademark Registration",
+    "category": "Business & MSME",
+    "description": "File patent applications, register trademarks, apply for geographical indications, and register industrial designs through the intellectual property office.",
+    "url": "https://ipindia.gov.in",
+    "ministry": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+    "documents": [
+      "Application Form",
+      "Inventor/Applicant Aadhaar / PAN Card",
+      "Patent Specification / Trademark Representation",
+      "Power of Attorney (if filed through agent)",
+      "Priority Document (for international applications)"
+    ],
+    "processing_time": "18 months-3 years (patent); 12-18 months (trademark)",
+    "fee": "₹1,600-₹8,000 (patent, varies by applicant type); ₹4,500-₹9,000 (trademark)",
+    "tags": [
+      "patent",
+      "trademark",
+      "intellectual property",
+      "copyright",
+      "ip india",
+      "geographical indication",
+      "industrial design",
+      "dpiit",
+      "ipr"
+    ]
+  },
+  {
+    "id": "60",
+    "service_name": "PMEGP – Prime Minister's Employment Generation Programme",
+    "category": "Business & MSME",
+    "description": "Apply for PMEGP to set up new micro enterprises in non-farm sector with subsidy of 15-35% of project cost to generate self-employment for youth and artisans.",
+    "url": "https://pmegp.kvic.gov.in",
+    "ministry": "Ministry of MSME – KVIC",
+    "documents": [
+      "Aadhaar Card",
+      "Educational Certificate (8th pass minimum)",
+      "Project Report",
+      "Caste/Special Category Certificate (if applicable)",
+      "Photograph"
+    ],
+    "processing_time": "30-90 days",
+    "fee": "Free (application)",
+    "tags": [
+      "pmegp",
+      "employment generation",
+      "subsidy",
+      "kvic",
+      "micro enterprise",
+      "self employment",
+      "new business",
+      "artisan",
+      "youth employment"
+    ]
+  },
+  {
+    "id": "61",
+    "service_name": "MUDRA Loan – Pradhan Mantri MUDRA Yojana",
+    "category": "Business & MSME",
+    "description": "Access collateral-free micro loans under Shishu (up to ₹50,000), Kishor (₹50,000-₹5 lakh), and Tarun (₹5-₹10 lakh) categories for non-corporate small business activities.",
+    "url": "https://www.mudra.org.in",
+    "ministry": "Ministry of Finance – MUDRA",
+    "documents": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Business Activity Proof",
+      "Bank Statement (last 6 months)",
+      "Quotation of Machinery (if capital expenditure)"
+    ],
+    "processing_time": "7-30 days",
+    "fee": "Free (application); interest rate as per lending institution",
+    "tags": [
+      "mudra loan",
+      "pmmy",
+      "shishu loan",
+      "kishor loan",
+      "tarun loan",
+      "small business loan",
+      "self employment",
+      "working capital"
+    ]
+  },
+  {
+    "id": "62",
+    "service_name": "PM SVANidhi – Street Vendor Loan",
+    "category": "Business & MSME",
+    "description": "Apply for collateral-free working capital loans of ₹10,000 (1st loan), ₹20,000 (2nd), and ₹50,000 (3rd) for street vendors with digital transaction incentives and credit history building.",
+    "url": "https://pmsvanidhi.mohua.gov.in",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "documents": [
+      "Aadhaar Card",
+      "Letter of Recommendation / Vending Certificate from ULB",
+      "Bank Account Details",
+      "Mobile Number"
+    ],
+    "processing_time": "15-30 days",
+    "fee": "Free",
+    "tags": [
+      "svanidhi",
+      "street vendor loan",
+      "rehri",
+      "thela",
+      "working capital",
+      "micro loan",
+      "hawker",
+      "ulb",
+      "vending certificate"
+    ]
+  },
+  {
+    "id": "63",
+    "service_name": "EXIM Policy – Import Export Code (IEC)",
+    "category": "Business & MSME",
+    "description": "Apply for an Import Export Code (IEC) mandatory for all importers and exporters in India, issued by the Directorate General of Foreign Trade (DGFT).",
+    "url": "https://www.dgft.gov.in",
+    "ministry": "Ministry of Commerce & Industry – DGFT",
+    "documents": [
+      "PAN Card of entity",
+      "Aadhaar Card of authorised signatory",
+      "Bank Certificate / Cancelled Cheque",
+      "Proof of Registered Office Address",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "2-3 working days",
+    "fee": "₹500",
+    "tags": [
+      "iec",
+      "import export code",
+      "dgft",
+      "exim policy",
+      "trade licence",
+      "customs",
+      "export",
+      "import",
+      "foreign trade"
+    ]
+  },
+  {
+    "id": "64",
+    "service_name": "DigiLocker – Digital Document Wallet",
+    "category": "Digital Services & IT",
+    "description": "Store, access, and share government-issued digital documents including Aadhaar, PAN, driving licence, vehicle RC, marksheets, degree certificates, and insurance policies in one secure digital wallet.",
+    "url": "https://digilocker.gov.in",
+    "ministry": "Ministry of Electronics & Information Technology (MeitY)",
+    "documents": [
+      "Aadhaar-linked Mobile Number",
+      "Aadhaar Number (for activation)"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "digilocker",
+      "digital wallet",
+      "e-document",
+      "digital locker",
+      "document sharing",
+      "meity",
+      "digi document",
+      "paperless"
+    ]
+  },
+  {
+    "id": "65",
+    "service_name": "UMANG – Unified Mobile Application for New-age Governance",
+    "category": "Digital Services & IT",
+    "description": "Access 1,500+ government services from all major central and state departments on a single mobile application including EPF passbook, CBSE, EPFO, Aadhaar, NPS, and more.",
+    "url": "https://web.umang.gov.in",
+    "ministry": "Ministry of Electronics & Information Technology (MeitY)",
+    "documents": [
+      "Aadhaar-linked Mobile Number (for registration)"
+    ],
+    "processing_time": "Instant (app download and login)",
+    "fee": "Free",
+    "tags": [
+      "umang",
+      "single app",
+      "government services app",
+      "mobile governance",
+      "meity",
+      "1500 services",
+      "m-governance",
+      "digital india"
+    ]
+  },
+  {
+    "id": "66",
+    "service_name": "BHIM UPI – Digital Payment",
+    "category": "Digital Services & IT",
+    "description": "Register and use BHIM (Bharat Interface for Money) for instant bank-to-bank money transfers using UPI through mobile number, Aadhaar, or VPA (Virtual Payment Address).",
+    "url": "https://www.bhimupi.org.in",
+    "ministry": "Ministry of Electronics & IT – NPCI",
+    "documents": [
+      "Bank Account Details",
+      "Aadhaar-linked Mobile Number",
+      "Debit Card (for initial setup)",
+      "UPI-enabled Bank Account"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "bhim",
+      "upi",
+      "digital payment",
+      "money transfer",
+      "npci",
+      "virtual payment address",
+      "qr code",
+      "instant payment",
+      "bharat interface"
+    ]
+  },
+  {
+    "id": "67",
+    "service_name": "e-Procurement – Central Government Tenders (CPPP)",
+    "category": "Digital Services & IT",
+    "description": "View and participate in central government tenders and procurement notices from all ministries and departments through the Central Public Procurement Portal.",
+    "url": "https://eprocure.gov.in",
+    "ministry": "Ministry of Finance – NIC",
+    "documents": [
+      "Digital Signature Certificate (Class 3)",
+      "Company Registration Documents",
+      "PAN Card",
+      "GST Certificate",
+      "Bid Security (as per tender terms)"
+    ],
+    "processing_time": "As per tender schedule",
+    "fee": "Tender document fee as specified; free to view",
+    "tags": [
+      "tender",
+      "eprocure",
+      "government tender",
+      "cppp",
+      "procurement",
+      "bid",
+      "government contract",
+      "dsc",
+      "public procurement"
+    ]
+  },
+  {
+    "id": "68",
+    "service_name": "Open Government Data Platform (data.gov.in)",
+    "category": "Digital Services & IT",
+    "description": "Access and download open government datasets published by central ministries, state governments, and autonomous bodies for research, analysis, and application development.",
+    "url": "https://data.gov.in",
+    "ministry": "Ministry of Electronics & Information Technology (MeitY)",
+    "documents": [
+      "None required (open access)"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "open data",
+      "government data",
+      "dataset",
+      "api",
+      "data portal",
+      "meity",
+      "transparency",
+      "analytics",
+      "research data"
+    ]
+  },
+  {
+    "id": "69",
+    "service_name": "National Pension System (NPS) Enrollment",
+    "category": "Pension & Retirement",
+    "description": "Open an NPS account (Tier I and Tier II) for retirement savings with tax benefits under Section 80CCD(1), 80CCD(1B), and 80CCD(2), regulated by PFRDA.",
+    "url": "https://npscra.nsdl.co.in",
+    "ministry": "Pension Fund Regulatory and Development Authority (PFRDA) – Ministry of Finance",
+    "documents": [
+      "PAN Card",
+      "Aadhaar Card",
+      "Bank Account Details (for auto-debit)",
+      "Cancelled Cheque",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "7-10 working days (PRAN allotment)",
+    "fee": "₹125 (registration); subsequent contributions from ₹500",
+    "tags": [
+      "nps",
+      "national pension system",
+      "pran",
+      "retirement savings",
+      "80ccd",
+      "tax saving",
+      "pfrda",
+      "tier 1",
+      "tier 2"
+    ]
+  },
+  {
+    "id": "70",
+    "service_name": "NSAP – National Social Assistance Pensions",
+    "category": "Pension & Retirement",
+    "description": "Apply for pensions under NSAP schemes including IGNOAPS (old age), IGNWPS (widow), IGNDPS (disability), and NFBS (death of breadwinner) for BPL households.",
+    "url": "https://www.nsap.nic.in",
+    "ministry": "Ministry of Rural Development",
+    "documents": [
+      "Aadhaar Card",
+      "BPL Card / SECC Data Verification",
+      "Age Proof (for old age pension)",
+      "Death Certificate (for widow pension)",
+      "Disability Certificate (for disability pension)",
+      "Bank Account Details"
+    ],
+    "processing_time": "30-60 days",
+    "fee": "Free",
+    "tags": [
+      "nsap",
+      "old age pension",
+      "widow pension",
+      "disability pension",
+      "ignoaps",
+      "ignwps",
+      "igndps",
+      "bpl pension",
+      "social assistance"
+    ]
+  },
+  {
+    "id": "71",
+    "service_name": "Postal Life Insurance (PLI) & Rural PLI",
+    "category": "Banking & Finance",
+    "description": "Avail life insurance and endowment plans under Postal Life Insurance (PLI) for government employees and Rural Postal Life Insurance (RPLI) for rural population.",
+    "url": "https://www.indiapost.gov.in",
+    "ministry": "Department of Posts – Ministry of Communications",
+    "documents": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Age Proof",
+      "Medical Certificate (for higher sum assured)",
+      "Nominee Details",
+      "Service Certificate (for PLI)"
+    ],
+    "processing_time": "7-15 days (policy issuance)",
+    "fee": "Premium as per policy and sum assured",
+    "tags": [
+      "pli",
+      "rpli",
+      "postal life insurance",
+      "rural pli",
+      "endowment",
+      "whole life",
+      "india post",
+      "insurance",
+      "post office"
+    ]
+  },
+  {
+    "id": "72",
+    "service_name": "Post Office Savings Schemes (PPF / NSC / KVP)",
+    "category": "Banking & Finance",
+    "description": "Invest in government-backed savings instruments including PPF, National Savings Certificate (NSC), Kisan Vikas Patra (KVP), Senior Citizens Savings Scheme (SCSS), and Sukanya Samriddhi Yojana through post offices.",
+    "url": "https://www.indiapost.gov.in",
+    "ministry": "Ministry of Finance – National Savings Institute",
+    "documents": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Bank / Post Office Savings Account",
+      "Passport-size Photograph",
+      "Nomination Details"
+    ],
+    "processing_time": "Same day (for most instruments)",
+    "fee": "Investment amount as per scheme minimum",
+    "tags": [
+      "ppf",
+      "nsc",
+      "kvp",
+      "scss",
+      "sukanya samriddhi",
+      "post office savings",
+      "small savings",
+      "investment",
+      "tax saving",
+      "nsi"
+    ]
+  },
+  {
+    "id": "73",
+    "service_name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+    "category": "Banking & Finance",
+    "description": "Open a zero-balance Jan Dhan savings account at any bank or post office to access banking, remittances, RuPay debit card with accident insurance of ₹2 lakh, and overdraft facility.",
+    "url": "https://pmjdy.gov.in",
+    "ministry": "Ministry of Finance – Department of Financial Services",
+    "documents": [
+      "Aadhaar Card (primary KYC)",
+      "Passport-size Photograph",
+      "Mobile Number"
+    ],
+    "processing_time": "Same day to 7 days",
+    "fee": "Free",
+    "tags": [
+      "jan dhan",
+      "pmjdy",
+      "zero balance account",
+      "financial inclusion",
+      "rupay",
+      "banking",
+      "unbanked",
+      "accident insurance",
+      "overdraft"
+    ]
+  },
+  {
+    "id": "74",
+    "service_name": "CERSAI – Central Registry of Securitisation",
+    "category": "Banking & Finance",
+    "description": "Search and register security interests on movable and immovable properties including mortgages, to prevent multiple loans on the same property or asset.",
+    "url": "https://www.cersai.org.in",
+    "ministry": "Ministry of Finance – Reserve Bank of India",
+    "documents": [
+      "Property Documents / Registration Details",
+      "Lender Registration ID",
+      "Borrower PAN and Aadhaar"
+    ],
+    "processing_time": "Instant (registration and search)",
+    "fee": "₹50-₹500 (varies by transaction type)",
+    "tags": [
+      "cersai",
+      "security interest",
+      "mortgage",
+      "property registry",
+      "home loan",
+      "asset registry",
+      "rbi",
+      "banking",
+      "central registry"
+    ]
+  },
+  {
+    "id": "75",
+    "service_name": "Pradhan Mantri Ujjwala Yojana (PMUY) – LPG Connection",
+    "category": "Energy",
+    "description": "Apply for a free LPG connection under PMUY for women belonging to BPL / SC / ST / PM-AWAS / PMAY-G beneficiary households with free first refill and stove.",
+    "url": "https://pmuy.gov.in",
+    "ministry": "Ministry of Petroleum & Natural Gas",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card / SECC Data",
+      "Bank Account Details",
+      "BPL / Category Certificate",
+      "Address Proof",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "15-30 days",
+    "fee": "Free (for eligible beneficiaries)",
+    "tags": [
+      "ujjwala yojana",
+      "pmuy",
+      "lpg connection",
+      "free gas connection",
+      "bpl",
+      "cooking gas",
+      "clean fuel",
+      "women empowerment",
+      "hp gas",
+      "bharat gas",
+      "indane"
+    ]
+  },
+  {
+    "id": "76",
+    "service_name": "DDUGJY – Rural Electrification (Har Ghar Bijli)",
+    "category": "Energy",
+    "description": "Apply for free electricity connection under PM Sahaj Bijli Har Ghar Yojana – Saubhagya for rural and urban households without electricity.",
+    "url": "https://saubhagya.gov.in",
+    "ministry": "Ministry of Power",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Address Proof of the household"
+    ],
+    "processing_time": "Within 10 days (as per scheme guidelines)",
+    "fee": "Free",
+    "tags": [
+      "saubhagya",
+      "har ghar bijli",
+      "rural electrification",
+      "electricity connection",
+      "ddugjy",
+      "free electricity",
+      "household connection"
+    ]
+  },
+  {
+    "id": "77",
+    "service_name": "Jal Jeevan Mission – Har Ghar Nal",
+    "category": "Water & Sanitation",
+    "description": "Track status of piped drinking water supply under Jal Jeevan Mission for rural households. Gram Panchayats and citizens can access IMIS dashboard for tap water connection data.",
+    "url": "https://jaljeevanmission.gov.in",
+    "ministry": "Ministry of Jal Shakti – Department of Drinking Water & Sanitation",
+    "documents": [
+      "None required (tracking portal)",
+      "Application via Gram Panchayat (for new connections)"
+    ],
+    "processing_time": "Varies by district and village",
+    "fee": "Free (nominal service charge by Gram Panchayat)",
+    "tags": [
+      "jal jeevan mission",
+      "har ghar nal",
+      "piped water",
+      "drinking water",
+      "rural water supply",
+      "tap connection",
+      "safe water",
+      "jal shakti"
+    ]
+  },
+  {
+    "id": "78",
+    "service_name": "Swachh Bharat Mission (SBM) – Toilet Construction",
+    "category": "Water & Sanitation",
+    "description": "Apply for incentive under SBM for construction of Individual Household Latrines (IHHL) in rural areas. Track ODF village and Swachh Sarvekshan rankings.",
+    "url": "https://swachhbharatmission.gov.in",
+    "ministry": "Ministry of Jal Shakti – Department of Drinking Water & Sanitation",
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "BPL Card (for rural incentive)",
+      "Applicant Photograph"
+    ],
+    "processing_time": "30-60 days (after verification)",
+    "fee": "Free (incentive of ₹12,000 for rural IHHL)",
+    "tags": [
+      "swachh bharat",
+      "sbm",
+      "toilet",
+      "ihhl",
+      "odf",
+      "open defecation free",
+      "sanitation",
+      "clean india",
+      "swachhata"
+    ]
+  },
+  {
+    "id": "79",
+    "service_name": "MGNREGS – Mahatma Gandhi National Rural Employment Guarantee",
+    "category": "Rural Development",
+    "description": "Register for MGNREGA job card to avail 100 days of guaranteed wage employment per year for rural households. Apply online and track payments through the NREGASoft portal.",
+    "url": "https://nrega.nic.in",
+    "ministry": "Ministry of Rural Development",
+    "documents": [
+      "Aadhaar Card",
+      "Address Proof (rural)",
+      "Ration Card",
+      "Bank Account / Post Office Account Details",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "15 days (job card issuance)",
+    "fee": "Free",
+    "tags": [
+      "mgnrega",
+      "mgnregs",
+      "nrega",
+      "job card",
+      "rural employment",
+      "100 days work",
+      "wage employment",
+      "gram panchayat",
+      "narega"
+    ]
+  },
+  {
+    "id": "80",
+    "service_name": "PM Gram Sadak Yojana (PMGSY) – Road Status",
+    "category": "Rural Development",
+    "description": "Track construction and status of all-weather rural road connectivity under PMGSY for unconnected habitations. Citizen feedback mechanism for road quality.",
+    "url": "https://pmgsy.nic.in",
+    "ministry": "Ministry of Rural Development",
+    "documents": [
+      "None required (tracking portal)"
+    ],
+    "processing_time": "Not applicable (status tracking)",
+    "fee": "Free",
+    "tags": [
+      "pmgsy",
+      "gram sadak",
+      "rural road",
+      "all-weather road",
+      "habitation connectivity",
+      "village road",
+      "rural development"
+    ]
+  },
+  {
+    "id": "81",
+    "service_name": "eGram Swaraj – Panchayat Accounting & Governance",
+    "category": "Rural Development",
+    "description": "Access Gram Panchayat accounts, plan activities, track fund utilization, and monitor rural governance through the eGram Swaraj unified portal for decentralized governance.",
+    "url": "https://egramswaraj.gov.in",
+    "ministry": "Ministry of Panchayati Raj",
+    "documents": [
+      "None required (public portal)"
+    ],
+    "processing_time": "Real-time (data access)",
+    "fee": "Free",
+    "tags": [
+      "egram swaraj",
+      "gram panchayat",
+      "panchayati raj",
+      "rural governance",
+      "15th finance",
+      "dbt panchayat",
+      "gram sabha",
+      "village accounts"
+    ]
+  },
+  {
+    "id": "82",
+    "service_name": "DAY-NRLM – Aajeevika SHG Registration",
+    "category": "Rural Development",
+    "description": "Register Self Help Groups (SHGs) under Deendayal Antyodaya Yojana – National Rural Livelihoods Mission for income generation, credit, and livelihood support for rural women.",
+    "url": "https://aajeevika.gov.in",
+    "ministry": "Ministry of Rural Development",
+    "documents": [
+      "SHG Group Registration Form",
+      "Members' Aadhaar Cards",
+      "Group Bank Account Details",
+      "Meeting Registers"
+    ],
+    "processing_time": "30-60 days",
+    "fee": "Free",
+    "tags": [
+      "nrlm",
+      "aajeevika",
+      "self help group",
+      "shg",
+      "rural livelihoods",
+      "women empowerment",
+      "microfinance",
+      "day-nrlm",
+      "rural income"
+    ]
+  },
+  {
+    "id": "83",
+    "service_name": "PM Matru Vandana Yojana (PMMVY) – Maternity Benefit",
+    "category": "Women & Child Development",
+    "description": "Pregnant and lactating women can receive ₹6,000 (₹5,000 + ₹1,000 JSY incentive) in three installments for first live birth under Pradhan Mantri Matru Vandana Yojana.",
+    "url": "https://pmmvy.wcd.gov.in",
+    "ministry": "Ministry of Women & Child Development",
+    "documents": [
+      "Aadhaar Card",
+      "MCP Card (Mother and Child Protection Card)",
+      "Bank Account Details (of the woman)",
+      "Bank Passbook"
+    ],
+    "processing_time": "30-60 days per installment",
+    "fee": "Free",
+    "tags": [
+      "pmmvy",
+      "maternity benefit",
+      "pregnancy benefit",
+      "jsy",
+      "mother child card",
+      "mcp card",
+      "anganwadi",
+      "nutrition",
+      "wcd"
+    ]
+  },
+  {
+    "id": "84",
+    "service_name": "Anganwadi Services (ICDS) – Child Nutrition",
+    "category": "Women & Child Development",
+    "description": "Register children (0-6 years) and pregnant/lactating women at nearest Anganwadi centre for supplementary nutrition, immunization, health check-up, and early childhood care and education.",
+    "url": "https://icds-wcd.nic.in",
+    "ministry": "Ministry of Women & Child Development",
+    "documents": [
+      "Child's Birth Certificate",
+      "Mother's Aadhaar Card",
+      "Address Proof",
+      "Mother and Child Protection (MCP) Card"
+    ],
+    "processing_time": "Immediate (enrollment at centre)",
+    "fee": "Free",
+    "tags": [
+      "anganwadi",
+      "icds",
+      "child nutrition",
+      "supplementary nutrition",
+      "early childhood",
+      "immunization",
+      "poshan",
+      "pregnant women",
+      "wcd"
+    ]
+  },
+  {
+    "id": "85",
+    "service_name": "Sukanya Samriddhi Yojana (SSY)",
+    "category": "Women & Child Development",
+    "description": "Open a government-backed savings account for a girl child (below 10 years) to save for her education and marriage with one of the highest interest rates among small savings schemes.",
+    "url": "https://www.indiapost.gov.in",
+    "ministry": "Ministry of Finance – Ministry of Women & Child Development",
+    "documents": [
+      "Girl Child's Birth Certificate",
+      "Parent/Guardian Aadhaar Card",
+      "Parent/Guardian PAN Card",
+      "Address Proof",
+      "Photograph of girl child and parent"
+    ],
+    "processing_time": "Same day (account opening)",
+    "fee": "Minimum deposit ₹250 per year, maximum ₹1.5 lakh per year",
+    "tags": [
+      "sukanya samriddhi",
+      "ssy",
+      "girl child savings",
+      "beti bachao",
+      "education savings",
+      "marriage fund",
+      "tax saving",
+      "post office",
+      "small savings"
+    ]
+  },
+  {
+    "id": "86",
+    "service_name": "Beti Bachao Beti Padhao",
+    "category": "Women & Child Development",
+    "description": "Access information, locate beneficiary services, and avail incentives under the BBBP scheme aimed at addressing declining child sex ratio and promoting welfare and education of the girl child.",
+    "url": "https://wcd.nic.in",
+    "ministry": "Ministry of Women & Child Development",
+    "documents": [
+      "Aadhaar Card",
+      "Birth Certificate of girl child",
+      "Parent's ID and Address Proof"
+    ],
+    "processing_time": "Varies by scheme component",
+    "fee": "Free",
+    "tags": [
+      "beti bachao",
+      "beti padhao",
+      "bbbp",
+      "girl child",
+      "sex ratio",
+      "gender equality",
+      "women empowerment",
+      "wcd"
+    ]
+  },
+  {
+    "id": "87",
+    "service_name": "CARA – Child Adoption Services",
+    "category": "Women & Child Development",
+    "description": "Register as prospective adoptive parents for domestic or inter-country adoption of orphaned, abandoned, or surrendered children through CARA's centralised adoption resource authority.",
+    "url": "https://cara.wcd.gov.in",
+    "ministry": "Ministry of Women & Child Development – CARA",
+    "documents": [
+      "Aadhaar Card",
+      "Marriage Certificate",
+      "Income Proof",
+      "Residence Proof",
+      "Medical Fitness Certificate",
+      "Police Clearance Certificate",
+      "Home Study Report"
+    ],
+    "processing_time": "6-24 months (varies by child availability)",
+    "fee": "Free (domestic adoption)",
+    "tags": [
+      "adoption",
+      "cara",
+      "child adoption",
+      "orphan",
+      "adopt a child",
+      "hague convention",
+      "inter-country adoption",
+      "wcd"
+    ]
+  },
+  {
+    "id": "88",
+    "service_name": "PM Skill India – PMKVY Skill Training",
+    "category": "Skill Development",
+    "description": "Enroll in Pradhan Mantri Kaushal Vikas Yojana (PMKVY) short-term skill training programs with free certification, placement assistance, and monetary reward up to ₹8,000.",
+    "url": "https://www.pmkvyofficial.org",
+    "ministry": "Ministry of Skill Development & Entrepreneurship – NSDC",
+    "documents": [
+      "Aadhaar Card",
+      "Educational Certificates",
+      "Bank Account Details (for reward disbursement)",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "15-90 days (course duration)",
+    "fee": "Free (fully funded)",
+    "tags": [
+      "pmkvy",
+      "skill india",
+      "vocational training",
+      "nsdc",
+      "skill training",
+      "certification",
+      "placement",
+      "kaushal vikas",
+      "free training"
+    ]
+  },
+  {
+    "id": "89",
+    "service_name": "Skill India Digital – Online Skill Courses",
+    "category": "Skill Development",
+    "description": "Access free and paid skill development courses across 100+ sectors on the Skill India Digital platform integrated with PMKVY, apprenticeship, and job placement services.",
+    "url": "https://www.skillindiadigital.gov.in",
+    "ministry": "Ministry of Skill Development & Entrepreneurship",
+    "documents": [
+      "Aadhaar Card",
+      "Mobile Number",
+      "Educational Qualification Details"
+    ],
+    "processing_time": "Instant (enrollment); course duration varies",
+    "fee": "Free for PMKVY-linked courses; fee for premium courses",
+    "tags": [
+      "skill india digital",
+      "online courses",
+      "vocational education",
+      "e-learning",
+      "digital skills",
+      "industry certification",
+      "msde"
+    ]
+  },
+  {
+    "id": "90",
+    "service_name": "UPSC – Civil Services Examination",
+    "category": "Government Recruitment",
+    "description": "Apply for UPSC Civil Services (IAS/IPS/IFS), engineering services, medical services, and other central services examinations through the official UPSC portal.",
+    "url": "https://www.upsc.gov.in",
+    "ministry": "Union Public Service Commission",
+    "documents": [
+      "Aadhaar Card / Voter ID / Passport",
+      "Graduation Certificate",
+      "Category Certificate (if applicable)",
+      "Passport-size Photograph",
+      "Scanned Signature"
+    ],
+    "processing_time": "Varies (examination schedule; results in 12-18 months)",
+    "fee": "₹100-₹200 (varies; SC/ST/women exempt)",
+    "tags": [
+      "upsc",
+      "civil services",
+      "ias",
+      "ips",
+      "ifs",
+      "cse",
+      "prelims",
+      "mains",
+      "interview",
+      "daf",
+      "all india services"
+    ]
+  },
+  {
+    "id": "91",
+    "service_name": "SSC – Staff Selection Commission Examinations",
+    "category": "Government Recruitment",
+    "description": "Apply for SSC CGL, CHSL, MTS, CPO, JE, GD Constable, and other central government staff selection examinations for Grade B and C positions.",
+    "url": "https://ssc.gov.in",
+    "ministry": "Ministry of Personnel, Public Grievances & Pensions",
+    "documents": [
+      "Aadhaar Card",
+      "Educational Certificates (10th / 12th / Graduation as per post)",
+      "Category Certificate (if applicable)",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "6-18 months (recruitment cycle)",
+    "fee": "₹100 (SC/ST/Women/Ex-Servicemen: Free)",
+    "tags": [
+      "ssc",
+      "cgl",
+      "chsl",
+      "mts",
+      "cpo",
+      "gd constable",
+      "government job",
+      "central government",
+      "staff selection",
+      "group b",
+      "group c"
+    ]
+  },
+  {
+    "id": "92",
+    "service_name": "Railway Recruitment Board (RRB) Examinations",
+    "category": "Government Recruitment",
+    "description": "Apply for RRB NTPC, Group D, ALP, JE, RPF/RPSF, and para-medical staff recruitment examinations for Indian Railways conducted by Railway Recruitment Boards.",
+    "url": "https://www.indianrailways.gov.in",
+    "ministry": "Ministry of Railways",
+    "documents": [
+      "Aadhaar Card",
+      "Educational Certificates (as per post)",
+      "Category Certificate (if applicable)",
+      "Passport-size Photograph",
+      "Scanned Signature"
+    ],
+    "processing_time": "6-18 months (recruitment cycle)",
+    "fee": "₹500 (₹250 for SC/ST/Women/Minorities/EBC)",
+    "tags": [
+      "rrb",
+      "railway recruitment",
+      "ntpc",
+      "group d",
+      "alp",
+      "loco pilot",
+      "rpf",
+      "railway jobs",
+      "indian railways"
+    ]
+  },
+  {
+    "id": "93",
+    "service_name": "Agnipath – Agniveer Military Recruitment",
+    "category": "Government Recruitment",
+    "description": "Apply to join the Indian Army, Navy, or Air Force as an Agniveer for a four-year service period under the Agnipath military recruitment scheme.",
+    "url": "https://joinindianarmy.nic.in",
+    "ministry": "Ministry of Defence",
+    "documents": [
+      "Aadhaar Card",
+      "Class 10 / 12 Certificates",
+      "Physical Fitness Certificate",
+      "Category Certificate (if applicable)",
+      "Bank Account Details"
+    ],
+    "processing_time": "3-6 months (selection and training)",
+    "fee": "Free",
+    "tags": [
+      "agnipath",
+      "agniveer",
+      "army recruitment",
+      "navy recruitment",
+      "airforce recruitment",
+      "military",
+      "defence",
+      "four years",
+      "seva nidhi"
+    ]
+  },
+  {
+    "id": "94",
+    "service_name": "IBPS – Bank Recruitment Examinations",
+    "category": "Government Recruitment",
+    "description": "Apply for IBPS PO, Clerk, SO, RRB Officer, and RRB Office Assistant examinations for recruitment to public sector banks and regional rural banks.",
+    "url": "https://www.ibps.in",
+    "ministry": "Ministry of Finance – Institute of Banking Personnel Selection",
+    "documents": [
+      "Aadhaar Card",
+      "Graduation Certificate (or relevant qualification)",
+      "Category Certificate (if applicable)",
+      "Passport-size Photograph",
+      "Scanned Signature"
+    ],
+    "processing_time": "6-12 months (recruitment cycle)",
+    "fee": "₹175-₹850 (varies by post and category)",
+    "tags": [
+      "ibps",
+      "bank jobs",
+      "po exam",
+      "clerk exam",
+      "rrb officer",
+      "public sector bank",
+      "banking recruitment",
+      "so exam",
+      "banking career"
+    ]
+  },
+  {
+    "id": "95",
+    "service_name": "Supreme Court of India – e-Filing & Case Status",
+    "category": "Legal & Judiciary",
+    "description": "File petitions, track case status, access cause lists, and view judgment orders at the Supreme Court of India through the official online portal.",
+    "url": "https://www.sci.gov.in",
+    "ministry": "Supreme Court of India",
+    "documents": [
+      "Case Number / SLP / Diary Number (for status query)",
+      "Advocate Enrollment Certificate (for e-filing)",
+      "Certified Copies of Lower Court Orders",
+      "Vakalatnama"
+    ],
+    "processing_time": "Varies (judicial timeline)",
+    "fee": "₹50-₹500 (filing fees vary by matter type)",
+    "tags": [
+      "supreme court",
+      "sci",
+      "case status",
+      "judgment",
+      "petition",
+      "writ petition",
+      "slp",
+      "cause list",
+      "e-filing",
+      "court records"
+    ]
+  },
+  {
+    "id": "96",
+    "service_name": "eCourts – District & High Court Case Status",
+    "category": "Legal & Judiciary",
+    "description": "Track case status, access cause lists, view judgments, and get SMS alerts for hearings at district courts, sessions courts, and high courts across India.",
+    "url": "https://ecourts.gov.in",
+    "ministry": "Department of Justice – Ministry of Law & Justice",
+    "documents": [
+      "Case Number / CNR Number (for status)",
+      "Party Name (for case search)"
+    ],
+    "processing_time": "Real-time (case data)",
+    "fee": "Free",
+    "tags": [
+      "ecourts",
+      "case status",
+      "court hearing",
+      "cnr",
+      "district court",
+      "high court",
+      "cause list",
+      "judgment",
+      "e-courts",
+      "judiciary"
+    ]
+  },
+  {
+    "id": "97",
+    "service_name": "Legal Services Authority – Free Legal Aid",
+    "category": "Legal & Judiciary",
+    "description": "Apply for free legal aid and representation from NALSA for SC/ST, women, children, persons with disabilities, victims of trafficking, and persons with income below prescribed limits.",
+    "url": "https://nalsa.gov.in",
+    "ministry": "Ministry of Law & Justice – NALSA",
+    "documents": [
+      "Aadhaar Card",
+      "Income Certificate (below ₹1 lakh for most states)",
+      "Category Certificate (for SC/ST)",
+      "Case-related Documents"
+    ],
+    "processing_time": "Immediate (emergency legal aid); 3-7 days (regular)",
+    "fee": "Free",
+    "tags": [
+      "nalsa",
+      "legal aid",
+      "free lawyer",
+      "legal services",
+      "lok adalat",
+      "slsa",
+      "dlsa",
+      "legal assistance",
+      "under-trial",
+      "victim"
+    ]
+  },
+  {
+    "id": "98",
+    "service_name": "Lok Adalat – Out-of-Court Settlement",
+    "category": "Legal & Judiciary",
+    "description": "Resolve pending court cases or pre-litigation disputes through Lok Adalat – a statutory alternative dispute resolution mechanism where no court fees are payable.",
+    "url": "https://nalsa.gov.in",
+    "ministry": "Ministry of Law & Justice – NALSA",
+    "documents": [
+      "Case Details / FIR Copy",
+      "ID Proof of parties",
+      "Original Documents related to dispute"
+    ],
+    "processing_time": "Same day to 3 sessions",
+    "fee": "Free (court fee refunded if settled at Lok Adalat)",
+    "tags": [
+      "lok adalat",
+      "adr",
+      "dispute resolution",
+      "out of court",
+      "settlement",
+      "motor accident",
+      "labour dispute",
+      "family dispute",
+      "nalsa"
+    ]
+  },
+  {
+    "id": "99",
+    "service_name": "IRDAI – Insurance Grievance & Policy Services",
+    "category": "Banking & Finance",
+    "description": "Register complaints against insurance companies, check licensed insurers, access grievance redressal, and verify insurance agent registration through the IRDAI portal.",
+    "url": "https://www.irdai.gov.in",
+    "ministry": "Ministry of Finance – IRDAI",
+    "documents": [
+      "Policy Number",
+      "Complaint Details",
+      "ID Proof"
+    ],
+    "processing_time": "15-30 days (grievance resolution)",
+    "fee": "Free",
+    "tags": [
+      "irdai",
+      "insurance regulator",
+      "insurance complaint",
+      "grievance",
+      "igms",
+      "insurance policy",
+      "life insurance",
+      "health insurance",
+      "general insurance"
+    ]
+  },
+  {
+    "id": "100",
+    "service_name": "SEBI – Securities Market Complaints (SCORES)",
+    "category": "Banking & Finance",
+    "description": "Lodge complaints against stock brokers, listed companies, mutual funds, and other SEBI-registered entities through SEBI SCORES (Complaint Redressal System).",
+    "url": "https://scores.gov.in",
+    "ministry": "Ministry of Finance – Securities & Exchange Board of India",
+    "documents": [
+      "Complaint Details",
+      "PAN Card",
+      "Investment Proof / Transaction Records",
+      "Correspondence with Entity"
+    ],
+    "processing_time": "30-45 days",
+    "fee": "Free",
+    "tags": [
+      "sebi",
+      "scores",
+      "investor complaint",
+      "stock market",
+      "mutual fund",
+      "broker complaint",
+      "investor protection",
+      "securities"
+    ]
+  },
+  {
+    "id": "101",
+    "service_name": "RBI – Banking Ombudsman Complaint",
+    "category": "Banking & Finance",
+    "description": "File complaints against banks, NBFCs, and payment system operators for deficiency in services including unfair charges, fraud, and service denial through RBI Integrated Ombudsman Scheme.",
+    "url": "https://cms.rbi.org.in",
+    "ministry": "Reserve Bank of India",
+    "documents": [
+      "Bank Account Details",
+      "Complaint Details with Evidence",
+      "Prior Complaint Reference to Bank",
+      "ID Proof"
+    ],
+    "processing_time": "30-90 days",
+    "fee": "Free",
+    "tags": [
+      "rbi",
+      "banking ombudsman",
+      "bank complaint",
+      "nbfc complaint",
+      "crpc",
+      "cms",
+      "banking grievance",
+      "payment fraud",
+      "unfair charges"
+    ]
+  },
+  {
+    "id": "102",
+    "service_name": "National Consumer Helpline – Consumer Complaint",
+    "category": "Legal & Judiciary",
+    "description": "Register complaints against companies for defective products, deficient services, unfair trade practices, and e-commerce fraud through the National Consumer Helpline.",
+    "url": "https://consumerhelpline.gov.in",
+    "ministry": "Ministry of Consumer Affairs, Food & Public Distribution",
+    "documents": [
+      "Invoice / Receipt",
+      "Complaint Description",
+      "ID Proof",
+      "Communication with the Company"
+    ],
+    "processing_time": "7-30 days",
+    "fee": "Free",
+    "tags": [
+      "consumer complaint",
+      "consumer helpline",
+      "defective product",
+      "e-commerce",
+      "unfair trade",
+      "consumer forum",
+      "consumer protection",
+      "1800-11-4000"
+    ]
+  },
+  {
+    "id": "103",
+    "service_name": "CPGRAMS – Public Grievances Portal",
+    "category": "Governance & Grievances",
+    "description": "Lodge and track grievances against any central government ministry, department, or public sector undertaking through the Centralised Public Grievance Redress and Monitoring System.",
+    "url": "https://pgportal.gov.in",
+    "ministry": "Ministry of Personnel, Public Grievances & Pensions – DARPG",
+    "documents": [
+      "Registration ID / Mobile Number",
+      "Grievance Details",
+      "Supporting Documents (if any)"
+    ],
+    "processing_time": "30-60 days",
+    "fee": "Free",
+    "tags": [
+      "cpgrams",
+      "public grievance",
+      "pg portal",
+      "complaint",
+      "government complaint",
+      "darpg",
+      "ministry complaint",
+      "grievance redressal"
+    ]
+  },
+  {
+    "id": "104",
+    "service_name": "MyGov – Citizen Engagement Platform",
+    "category": "Governance & Grievances",
+    "description": "Participate in government consultations, give feedback on policy drafts, contribute to surveys, and engage with government initiatives through the MyGov citizen participation platform.",
+    "url": "https://www.mygov.in",
+    "ministry": "Ministry of Electronics & IT – MyGov",
+    "documents": [
+      "None required (registration with mobile/email)"
+    ],
+    "processing_time": "Immediate (participation and feedback)",
+    "fee": "Free",
+    "tags": [
+      "mygov",
+      "citizen engagement",
+      "policy feedback",
+      "survey",
+      "idea",
+      "government consultation",
+      "democratic participation",
+      "co-creation"
+    ]
+  },
+  {
+    "id": "105",
+    "service_name": "RTI – Right to Information Application",
+    "category": "Governance & Grievances",
+    "description": "File an online RTI application to any central government public authority or appeal against RTI rejection through the Central Information Commission's portal.",
+    "url": "https://rtionline.gov.in",
+    "ministry": "Ministry of Personnel – Central Information Commission",
+    "documents": [
+      "Applicant's ID Proof (optional online)",
+      "Application with specific information request"
+    ],
+    "processing_time": "30 days (first response), 45 days (if involves third party)",
+    "fee": "₹10 per application; ₹2 per page for documents",
+    "tags": [
+      "rti",
+      "right to information",
+      "transparency",
+      "cic",
+      "public authority",
+      "information request",
+      "government transparency",
+      "rti act 2005"
+    ]
+  },
+  {
+    "id": "106",
+    "service_name": "India Portal – National Citizen Services Gateway",
+    "category": "Governance & Grievances",
+    "description": "Access all central government information, services, forms, and scheme details through the National Portal of India – the single window for government services and information.",
+    "url": "https://www.india.gov.in",
+    "ministry": "Ministry of Electronics & Information Technology – NIC",
+    "documents": [
+      "None required (information gateway)"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "india portal",
+      "national portal",
+      "government gateway",
+      "nic",
+      "services portal",
+      "citizen services",
+      "central government",
+      "state services"
+    ]
+  },
+  {
+    "id": "107",
+    "service_name": "Indian Railways – IRCTC Ticket Booking",
+    "category": "Railways & Aviation",
+    "description": "Book reserved train tickets (e-ticket and i-ticket), check PNR status, cancel bookings, apply for railway passes, and access all Indian Railways passenger services.",
+    "url": "https://www.irctc.co.in",
+    "ministry": "Ministry of Railways – IRCTC",
+    "documents": [
+      "Valid ID Proof (Aadhaar / Voter ID / PAN / Passport – one required for verification at station)",
+      "IRCTC Registered Account"
+    ],
+    "processing_time": "Instant (e-ticket)",
+    "fee": "Train fare as per class and distance + ₹15-30 service charge",
+    "tags": [
+      "irctc",
+      "train ticket",
+      "railway booking",
+      "pnr status",
+      "e-ticket",
+      "tatkal booking",
+      "train reservation",
+      "indian railways",
+      "ac coach"
+    ]
+  },
+  {
+    "id": "108",
+    "service_name": "Indian Railways – Rail Madad (Complaint & Help)",
+    "category": "Railways & Aviation",
+    "description": "File real-time complaints about train cleanliness, food quality, staff behaviour, and medical emergencies, and track resolution through Rail Madad during your journey.",
+    "url": "https://railmadad.indianrailways.gov.in",
+    "ministry": "Ministry of Railways",
+    "documents": [
+      "PNR Number",
+      "Complaint Description",
+      "Train Number"
+    ],
+    "processing_time": "During journey (real-time resolution)",
+    "fee": "Free",
+    "tags": [
+      "rail madad",
+      "railway complaint",
+      "train complaint",
+      "food complaint",
+      "irctc helpline",
+      "complaint resolution",
+      "railway grievance"
+    ]
+  },
+  {
+    "id": "109",
+    "service_name": "DGCA – Civil Aviation Services & Pilot Licence",
+    "category": "Railways & Aviation",
+    "description": "Apply for Pilot licence, airworthiness certification, aviation security approvals, and access all DGCA regulatory services for civil aviation in India.",
+    "url": "https://www.dgca.gov.in",
+    "ministry": "Ministry of Civil Aviation – DGCA",
+    "documents": [
+      "Valid Passport",
+      "Medical Certificate (Class 1 for commercial pilot)",
+      "Training Records / Logbook",
+      "Ground Exams Pass Certificate"
+    ],
+    "processing_time": "30-90 days (licence issuance)",
+    "fee": "₹1,000-₹5,000 (varies by licence type)",
+    "tags": [
+      "dgca",
+      "pilot licence",
+      "aviation",
+      "airworthiness",
+      "air operator certificate",
+      "atpl",
+      "cpl",
+      "ppl",
+      "drone registration"
+    ]
+  },
+  {
+    "id": "110",
+    "service_name": "Digi Yatra – Paperless Airport Check-In",
+    "category": "Railways & Aviation",
+    "description": "Register on Digi Yatra for seamless, paperless and contactless airport entry using facial recognition at 24+ airports across India. Linked to Aadhaar and ticket booking.",
+    "url": "https://www.digiyatra.in",
+    "ministry": "Ministry of Civil Aviation – AAI",
+    "documents": [
+      "Aadhaar Card",
+      "Booked Flight Ticket (PNR)",
+      "Selfie/Photo for facial recognition enrollment"
+    ],
+    "processing_time": "Instant (one-time registration)",
+    "fee": "Free",
+    "tags": [
+      "digi yatra",
+      "paperless checkin",
+      "facial recognition",
+      "airport",
+      "aadhaar travel",
+      "contactless",
+      "aai",
+      "aviation"
+    ]
+  },
+  {
+    "id": "111",
+    "service_name": "India Post – Speed Post, Money Order & Services",
+    "category": "Posts & Telecommunications",
+    "description": "Book Speed Post, Registered Post, and International Mail online. Access postal money orders, track shipments, locate post offices, and access postal financial services.",
+    "url": "https://www.indiapost.gov.in",
+    "ministry": "Department of Posts – Ministry of Communications",
+    "documents": [
+      "Sender and receiver address details",
+      "Content declaration for international mail",
+      "ID Proof (for money orders above ₹5,000)"
+    ],
+    "processing_time": "1-3 days (Speed Post), 3-7 days (Registered Post)",
+    "fee": "₹15-₹500 (varies by weight, distance, and service type)",
+    "tags": [
+      "india post",
+      "speed post",
+      "registered post",
+      "money order",
+      "tracking",
+      "post office",
+      "courier",
+      "international mail",
+      "dop"
+    ]
+  },
+  {
+    "id": "112",
+    "service_name": "DoT – Mobile Number Portability (MNP)",
+    "category": "Posts & Telecommunications",
+    "description": "Port your mobile number from one telecom operator to another while retaining the same number by sending an SMS or applying online through Department of Telecommunications.",
+    "url": "https://www.dot.gov.in",
+    "ministry": "Department of Telecommunications – Ministry of Communications",
+    "documents": [
+      "Aadhaar Card",
+      "Existing mobile number (for OTP verification)"
+    ],
+    "processing_time": "3-7 working days",
+    "fee": "₹6.46 (MNP charge, collected by new operator)",
+    "tags": [
+      "mnp",
+      "mobile number portability",
+      "port number",
+      "telecom",
+      "dot",
+      "operator change",
+      "sim port",
+      "trai",
+      "number retention"
+    ]
+  },
+  {
+    "id": "113",
+    "service_name": "TRAI – Telecom Complaint (DND & Spam Calls)",
+    "category": "Posts & Telecommunications",
+    "description": "Register your mobile number on the Do Not Disturb registry, file complaints about unsolicited commercial communications (UCC), spam calls, and telemarketing through TRAI.",
+    "url": "https://www.trai.gov.in",
+    "ministry": "Telecom Regulatory Authority of India (TRAI)",
+    "documents": [
+      "Mobile Number for DND registration",
+      "Call details (time, date, caller number) for complaints"
+    ],
+    "processing_time": "7 days (DND activation); 30 days (complaint resolution)",
+    "fee": "Free",
+    "tags": [
+      "trai",
+      "dnd",
+      "do not disturb",
+      "spam call",
+      "ucc",
+      "telemarketing complaint",
+      "unwanted sms",
+      "telecom regulator"
+    ]
+  },
+  {
+    "id": "114",
+    "service_name": "ISRO – Space Technology Applications & Licensing",
+    "category": "Science & Technology",
+    "description": "Access ISRO's satellite data, remote sensing applications, space technology transfer licences, and information about India's space research programs and satellite launches.",
+    "url": "https://www.isro.gov.in",
+    "ministry": "Department of Space – ISRO",
+    "documents": [
+      "Organisation Proof (for data licensing)",
+      "Intended use declaration",
+      "NOC (for restricted satellite data)"
+    ],
+    "processing_time": "Varies by data type and licence",
+    "fee": "Free (open data), varies for licensed data",
+    "tags": [
+      "isro",
+      "space",
+      "satellite data",
+      "remote sensing",
+      "bhuvan",
+      "cartosat",
+      "navic",
+      "technology transfer",
+      "space research"
+    ]
+  },
+  {
+    "id": "115",
+    "service_name": "CSIR – Technology Transfer & Patent Licensing",
+    "category": "Science & Technology",
+    "description": "License patented CSIR technologies for commercial use, access scientific databases, and partner with CSIR labs for R&D collaboration and technology development.",
+    "url": "https://www.csir.res.in",
+    "ministry": "Ministry of Science & Technology – CSIR",
+    "documents": [
+      "Company Registration Certificate",
+      "Business Plan",
+      "Technology Requirements",
+      "Financial Statements"
+    ],
+    "processing_time": "30-90 days",
+    "fee": "Varies by technology and licensing type",
+    "tags": [
+      "csir",
+      "technology transfer",
+      "patent licensing",
+      "r&d",
+      "research collaboration",
+      "innovation",
+      "laboratory",
+      "industrial research"
+    ]
+  },
+  {
+    "id": "116",
+    "service_name": "ICAR – Agricultural Research Services",
+    "category": "Agriculture & Farmers",
+    "description": "Access ICAR's crop variety releases, agro-advisory services, seed distribution programs, and research publications for improving agricultural productivity and sustainability.",
+    "url": "https://www.icar.org.in",
+    "ministry": "Ministry of Agriculture & Farmers Welfare – ICAR",
+    "documents": [
+      "Farmer / Researcher Registration Details",
+      "Land Records (for seed programs)"
+    ],
+    "processing_time": "Varies by service",
+    "fee": "Free (information); varies for seed/variety distribution",
+    "tags": [
+      "icar",
+      "agricultural research",
+      "crop variety",
+      "seed",
+      "agro advisory",
+      "farm technology",
+      "agriculture scientist",
+      "krishi vigyan kendra"
+    ]
+  },
+  {
+    "id": "117",
+    "service_name": "IMD – Weather Forecast & Agro-met Services",
+    "category": "Science & Technology",
+    "description": "Access daily weather forecasts, cyclone alerts, monsoon predictions, agro-meteorological advisories, and climate data from India Meteorological Department.",
+    "url": "https://www.imd.gov.in",
+    "ministry": "Ministry of Earth Sciences – IMD",
+    "documents": [
+      "None required (public information portal)"
+    ],
+    "processing_time": "Real-time (forecasts updated 4-6 times daily)",
+    "fee": "Free (public forecasts); paid for specialised reports",
+    "tags": [
+      "imd",
+      "weather forecast",
+      "monsoon",
+      "cyclone alert",
+      "rainfall",
+      "agro-met",
+      "climate",
+      "temperature",
+      "humidity",
+      "mausam"
+    ]
+  },
+  {
+    "id": "118",
+    "service_name": "NDMA – Disaster Management Guidelines & Aid",
+    "category": "Science & Technology",
+    "description": "Access National Disaster Management Authority guidelines, disaster preparedness materials, and apply for ex-gratia relief in disaster-affected areas through state government portals.",
+    "url": "https://ndma.gov.in",
+    "ministry": "National Disaster Management Authority – Ministry of Home Affairs",
+    "documents": [
+      "Disaster Survey Certificate",
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Damage Assessment Report (for relief claims)"
+    ],
+    "processing_time": "15-60 days (relief disbursement)",
+    "fee": "Free",
+    "tags": [
+      "ndma",
+      "disaster management",
+      "flood relief",
+      "earthquake",
+      "cyclone relief",
+      "ex-gratia",
+      "sdrf",
+      "ndrf",
+      "disaster preparedness"
+    ]
+  },
+  {
+    "id": "119",
+    "service_name": "APEDA – Agricultural Exports Registration",
+    "category": "Commerce & Trade",
+    "description": "Register as an exporter of agricultural, processed food, and horticulture products, access quality certification, and avail export assistance from APEDA.",
+    "url": "https://www.apeda.gov.in",
+    "ministry": "Ministry of Commerce & Industry – APEDA",
+    "documents": [
+      "IEC (Import Export Code)",
+      "GSTIN",
+      "Aadhaar Card / Company Registration Certificate",
+      "Bank Account Details",
+      "Product Details"
+    ],
+    "processing_time": "7-15 days",
+    "fee": "₹5,000 (registration fee)",
+    "tags": [
+      "apeda",
+      "agricultural export",
+      "food export",
+      "horticulture export",
+      "basmati",
+      "grapex",
+      "certification",
+      "quality",
+      "export promotion"
+    ]
+  },
+  {
+    "id": "120",
+    "service_name": "MPEDA – Marine Products Exports",
+    "category": "Commerce & Trade",
+    "description": "Register as a shrimp/fish exporter, access processing plant approvals, quality certification for EU/US markets, and export development assistance from MPEDA.",
+    "url": "https://mpeda.gov.in",
+    "ministry": "Ministry of Commerce & Industry – MPEDA",
+    "documents": [
+      "IEC",
+      "GSTIN",
+      "Processing Plant Details",
+      "Bank Account Details",
+      "Exporter Registration Form"
+    ],
+    "processing_time": "7-21 days",
+    "fee": "₹5,000 (exporter registration)",
+    "tags": [
+      "mpeda",
+      "marine exports",
+      "seafood",
+      "shrimp export",
+      "fish export",
+      "eu certification",
+      "haccp",
+      "fisheries",
+      "aquaculture"
+    ]
+  },
+  {
+    "id": "121",
+    "service_name": "Invest India – FDI & Investment Facilitation",
+    "category": "Commerce & Trade",
+    "description": "Access single-window investment facilitation for foreign direct investment (FDI) approvals, regulatory guidance, sector-specific investment opportunities, and state-level support.",
+    "url": "https://www.investindia.gov.in",
+    "ministry": "Ministry of Commerce & Industry – Invest India",
+    "documents": [
+      "Investment Proposal Details",
+      "Company Incorporation Documents",
+      "Board Resolution",
+      "FDI Application (as per FEMA regulations)"
+    ],
+    "processing_time": "Varies by sector and approval type",
+    "fee": "Free",
+    "tags": [
+      "invest india",
+      "fdi",
+      "foreign investment",
+      "make in india",
+      "investment facilitation",
+      "ease of doing business",
+      "regulatory clearance"
+    ]
+  },
+  {
+    "id": "122",
+    "service_name": "FSSAI – Food Business Licence & Registration",
+    "category": "Health",
+    "description": "Obtain FSSAI licence or registration for food manufacturing, processing, distribution, or retail business. Mandatory for all food business operators (FBOs) in India.",
+    "url": "https://foscos.fssai.gov.in",
+    "ministry": "Ministry of Health & Family Welfare – FSSAI",
+    "documents": [
+      "Business Registration Certificate",
+      "PAN Card",
+      "Aadhaar Card of Proprietor",
+      "Address Proof of Food Premises",
+      "Water Test Report (for manufacturing)",
+      "Layout Plan"
+    ],
+    "processing_time": "7-30 days",
+    "fee": "₹100 (registration), ₹2,000-₹7,500 (licence, varies by scale)",
+    "tags": [
+      "fssai",
+      "food licence",
+      "food registration",
+      "food safety",
+      "fbo",
+      "food manufacturing",
+      "restaurant licence",
+      "foscos",
+      "food hygiene"
+    ]
+  },
+  {
+    "id": "123",
+    "service_name": "BIS – Bureau of Indian Standards Certification",
+    "category": "Commerce & Trade",
+    "description": "Apply for BIS product certification (ISI Mark), Hallmarking of gold jewellery, Electronic and IT product mandatory certification (CRS), and access Indian Standards.",
+    "url": "https://www.bis.gov.in",
+    "ministry": "Ministry of Consumer Affairs – Bureau of Indian Standards",
+    "documents": [
+      "Company Registration Certificate",
+      "Product Specification / Test Reports",
+      "Factory Audit Documents",
+      "Licence Application Form"
+    ],
+    "processing_time": "30-90 days",
+    "fee": "₹1,000-₹50,000 (varies by product category)",
+    "tags": [
+      "bis",
+      "isi mark",
+      "hallmark",
+      "gold hallmarking",
+      "product certification",
+      "quality standard",
+      "crs",
+      "indian standard",
+      "is mark"
+    ]
+  },
+  {
+    "id": "124",
+    "service_name": "Weights & Measures – LMPC Certificate",
+    "category": "Commerce & Trade",
+    "description": "Apply for Legal Metrology Packaged Commodity (LMPC) Certificate for importing pre-packaged commodities or verify calibrated weighing instruments for trade.",
+    "url": "https://consumeraffairs.nic.in",
+    "ministry": "Ministry of Consumer Affairs – Legal Metrology Division",
+    "documents": [
+      "IEC (for imports)",
+      "Sample of packaged commodity",
+      "Label details (MRP, net quantity, importer address)",
+      "Company registration proof"
+    ],
+    "processing_time": "15-30 days",
+    "fee": "₹500-₹2,000",
+    "tags": [
+      "lmpc",
+      "legal metrology",
+      "packaged commodity",
+      "weights measures",
+      "meterologic",
+      "labelling",
+      "import certificate",
+      "weighing instrument"
+    ]
+  },
+  {
+    "id": "125",
+    "service_name": "MCA IBBI – Insolvency & Bankruptcy Registration",
+    "category": "Legal & Judiciary",
+    "description": "Register as an Insolvency Professional, file corporate insolvency resolution applications, access the Corporate Debtors database, and manage liquidation proceedings through IBBI portal.",
+    "url": "https://www.ibbi.gov.in",
+    "ministry": "Ministry of Corporate Affairs – IBBI",
+    "documents": [
+      "Company Identification Number (CIN)",
+      "Financial Statements",
+      "List of Creditors",
+      "Insolvency Professional Licence (for IPs)"
+    ],
+    "processing_time": "Varies (CIRP is 180-330 days)",
+    "fee": "₹25,000-₹50,000 (filing fees)",
+    "tags": [
+      "ibbi",
+      "insolvency",
+      "bankruptcy",
+      "cirp",
+      "liquidation",
+      "corporate insolvency",
+      "insolvency professional",
+      "ibc",
+      "nclt"
+    ]
+  },
+  {
+    "id": "126",
+    "service_name": "PFMS – Public Financial Management System",
+    "category": "Governance & Grievances",
+    "description": "Track DBT payments, check beneficiary payment status for government schemes, and verify fund release from PFMS under all central government schemes.",
+    "url": "https://pfms.nic.in",
+    "ministry": "Ministry of Finance – Controller General of Accounts",
+    "documents": [
+      "Aadhaar Number / Bank Account Number (for beneficiary search)"
+    ],
+    "processing_time": "Real-time (payment tracking)",
+    "fee": "Free",
+    "tags": [
+      "pfms",
+      "dbt payment",
+      "direct benefit transfer",
+      "payment status",
+      "fund tracking",
+      "beneficiary",
+      "government payment",
+      "scheme payment"
+    ]
+  },
+  {
+    "id": "127",
+    "service_name": "JAM Trinity – DBT Linkage (Jan Dhan-Aadhaar-Mobile)",
+    "category": "Governance & Grievances",
+    "description": "Link your Jan Dhan bank account with Aadhaar and mobile number to receive Direct Benefit Transfer (DBT) payments from government schemes directly without intermediaries.",
+    "url": "https://dbtbharat.gov.in",
+    "ministry": "Ministry of Finance – DBT Mission",
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Passbook",
+      "Registered Mobile Number"
+    ],
+    "processing_time": "1-7 days (linkage)",
+    "fee": "Free",
+    "tags": [
+      "dbt",
+      "direct benefit transfer",
+      "jam trinity",
+      "jan dhan",
+      "aadhaar",
+      "mobile",
+      "subsidy",
+      "scheme benefit",
+      "bank linkage"
+    ]
+  },
+  {
+    "id": "128",
+    "service_name": "NSAP – Pradhan Mantri Vaya Vandana Yojana (PMVVY)",
+    "category": "Pension & Retirement",
+    "description": "Invest in PMVVY to receive guaranteed pension at 7.4% interest per annum for senior citizens aged 60 years and above through LIC of India. Maximum investment ₹15 lakh.",
+    "url": "https://www.licindia.in",
+    "ministry": "Ministry of Finance – LIC of India",
+    "documents": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Age Proof (60 years+)",
+      "Bank Account Details",
+      "Cancelled Cheque"
+    ],
+    "processing_time": "7-15 days (policy issuance)",
+    "fee": "Investment from ₹1.56 lakh to ₹15 lakh (lump sum)",
+    "tags": [
+      "pmvvy",
+      "senior citizen pension",
+      "LIC pension",
+      "guaranteed return",
+      "vaya vandana",
+      "7.4%",
+      "retirement scheme",
+      "60 years"
+    ]
+  },
+  {
+    "id": "129",
+    "service_name": "MoRTH – Vaahan4 FASTag-KYC & RC Services",
+    "category": "Transport",
+    "description": "Update FASTag KYC, resolve blacklisted FASTag, get duplicate RC, check vehicle fitness renewal, pay green tax, and access all advanced Vahan portal features.",
+    "url": "https://vahan.parivahan.gov.in",
+    "ministry": "Ministry of Road Transport & Highways",
+    "documents": [
+      "RC (Registration Certificate)",
+      "Aadhaar Card",
+      "Insurance Certificate",
+      "Bank Account Details (for FASTag)"
+    ],
+    "processing_time": "Instant to 7 days",
+    "fee": "Varies by service (₹50-₹500)",
+    "tags": [
+      "vahan4",
+      "fastag kyc",
+      "blacklist fastag",
+      "duplicate rc",
+      "fitness certificate",
+      "green tax",
+      "hs code",
+      "motor vehicle tax"
+    ]
+  },
+  {
+    "id": "130",
+    "service_name": "PM YASASVI – Scholarship for OBC/EBC Students",
+    "category": "Education",
+    "description": "Apply for PM Young Achievers Scholarship Award Scheme for Vibrant India (YASASVI) for class 9 and 11 students from OBC, EBC, and DNT families with family income below ₹2.5 lakh.",
+    "url": "https://yet.nta.ac.in",
+    "ministry": "Ministry of Social Justice & Empowerment – NTA",
+    "documents": [
+      "Aadhaar Card",
+      "OBC/EBC/DNT Certificate",
+      "Income Certificate (below ₹2.5 lakh)",
+      "Class 8 / 10 Marksheet",
+      "Bank Account Details"
+    ],
+    "processing_time": "30-60 days (post examination)",
+    "fee": "Free (exam fee: ₹0)",
+    "tags": [
+      "yasasvi",
+      "obc scholarship",
+      "ebc scholarship",
+      "dnt",
+      "pm scholarship",
+      "class 9",
+      "class 11",
+      "social justice",
+      "nta"
+    ]
+  },
+  {
+    "id": "131",
+    "service_name": "PM e-VIDYA – Digital Education & DTH Channels",
+    "category": "Education",
+    "description": "Access free educational content through PM e-VIDYA including DIKSHA platform, SWAYAM MOOCs, 200+ DTH/IPTV channels, and One Nation One Digital Education platform.",
+    "url": "https://www.swayam.gov.in",
+    "ministry": "Ministry of Education",
+    "documents": [
+      "None required for MOOC access",
+      "Aadhaar-linked email for certificate courses"
+    ],
+    "processing_time": "Instant (for content access); 30-60 days (for exam-based certificates)",
+    "fee": "Free (SWAYAM courses), ₹1,000 (exam fee for credit transfer)",
+    "tags": [
+      "swayam",
+      "e-vidya",
+      "diksha",
+      "online education",
+      "mooc",
+      "digital learning",
+      "free courses",
+      "noc",
+      "college credit",
+      "pm e-vidya"
+    ]
+  },
+  {
+    "id": "132",
+    "service_name": "NABARD – Farmer Credit & Rural Development Finance",
+    "category": "Agriculture & Farmers",
+    "description": "Access NABARD-refinanced loan products through cooperative banks and RRBs for farm credit, microfinance, rural infrastructure, and SHG-bank linkage programs.",
+    "url": "https://www.nabard.org",
+    "ministry": "Ministry of Finance – NABARD",
+    "documents": [
+      "Aadhaar Card",
+      "Land Records",
+      "Loan Application to Bank",
+      "Bank Account Details"
+    ],
+    "processing_time": "7-30 days (via commercial banks/RRBs)",
+    "fee": "Varies by loan product",
+    "tags": [
+      "nabard",
+      "rural credit",
+      "farm loan",
+      "kcc",
+      "shg bank linkage",
+      "microfinance",
+      "rrb",
+      "cooperative bank",
+      "rural infrastructure"
+    ]
+  },
+  {
+    "id": "133",
+    "service_name": "PM Gati Shakti – Infra Projects Tracking",
+    "category": "Governance & Grievances",
+    "description": "Access the National Master Plan for multi-modal connectivity to view and track major infrastructure projects including roads, railways, ports, and airports under PM Gati Shakti.",
+    "url": "https://pmgatishakti.gov.in",
+    "ministry": "Ministry of Commerce & Industry",
+    "documents": [
+      "None required (public tracking portal)"
+    ],
+    "processing_time": "Real-time",
+    "fee": "Free",
+    "tags": [
+      "pm gati shakti",
+      "national master plan",
+      "infrastructure",
+      "multimodal connectivity",
+      "logistics",
+      "road",
+      "railway",
+      "port",
+      "airport",
+      "pipeline"
+    ]
+  },
+  {
+    "id": "134",
+    "service_name": "PHED / Jal Nigam – Water & Sewerage Connection",
+    "category": "Water & Sanitation",
+    "description": "Apply for new piped water supply connection or sewerage connection from state Public Health Engineering Department (PHED) or Jal Nigam authorities.",
+    "url": "https://services.india.gov.in",
+    "ministry": "State Public Health Engineering Department / Jal Nigam",
+    "documents": [
+      "Aadhaar Card",
+      "Property Ownership Documents",
+      "Address Proof",
+      "No-Objection Certificate (NOC) from housing society (if applicable)"
+    ],
+    "processing_time": "15-30 days",
+    "fee": "₹1,000-₹5,000 (connection charge varies by state and pipe diameter)",
+    "tags": [
+      "water connection",
+      "sewerage connection",
+      "phed",
+      "jal nigam",
+      "piped water",
+      "clean water",
+      "tap water",
+      "urban water supply"
+    ]
+  },
+  {
+    "id": "135",
+    "service_name": "CPCB – Pollution Compliance & NOC (Industrial)",
+    "category": "Environment & Climate",
+    "description": "Apply for consent to establish (CTE) and consent to operate (CTO) from Pollution Control Board for industries, and access environmental clearance and compliance reporting.",
+    "url": "https://cpcb.nic.in",
+    "ministry": "Ministry of Environment, Forest & Climate Change – CPCB",
+    "documents": [
+      "Industry Registration",
+      "Site Plan",
+      "Pollution Control Measures Description",
+      "EIA Report (for large projects)",
+      "Application Form"
+    ],
+    "processing_time": "30-90 days",
+    "fee": "₹1,000-₹50,000 (varies by industry size and type)",
+    "tags": [
+      "cpcb",
+      "pollution control",
+      "consent to operate",
+      "cte",
+      "cto",
+      "environmental clearance",
+      "ngt",
+      "industrial compliance",
+      "air pollution",
+      "water pollution"
+    ]
+  },
+  {
+    "id": "136",
+    "service_name": "Forest Clearance – MOEFCC e-Green Watch",
+    "category": "Environment & Climate",
+    "description": "Apply for forest clearance, wildlife clearance, and environmental clearance for projects impacting forest land, and track compliance through Ministry of Environment's portal.",
+    "url": "https://parivesh.nic.in",
+    "ministry": "Ministry of Environment, Forest & Climate Change",
+    "documents": [
+      "Project Report",
+      "Land Documents",
+      "Village / Gram Sabha Resolution (for forest land)",
+      "EIA Report",
+      "Site Maps"
+    ],
+    "processing_time": "90-365 days",
+    "fee": "₹5,000-₹1,00,000 (varies by project size)",
+    "tags": [
+      "forest clearance",
+      "environmental clearance",
+      "parivesh",
+      "wildlife clearance",
+      "moefcc",
+      "eia",
+      "green clearance",
+      "diversion of forest land"
+    ]
+  },
+  {
+    "id": "137",
+    "service_name": "NIC – NITI Aayog Aspirational Districts Programme",
+    "category": "Rural Development",
+    "description": "Track development progress in 112 Aspirational Districts across key health, nutrition, education, agriculture, financial inclusion, and infrastructure indicators.",
+    "url": "https://www.niti.gov.in",
+    "ministry": "NITI Aayog",
+    "documents": [
+      "None required (public tracking portal)"
+    ],
+    "processing_time": "Real-time",
+    "fee": "Free",
+    "tags": [
+      "niti aayog",
+      "aspirational districts",
+      "development index",
+      "health",
+      "education",
+      "nutrition",
+      "ranking",
+      "backward districts"
+    ]
+  },
+  {
+    "id": "138",
+    "service_name": "PMGDISHA – Pradhan Mantri Gramin Digital Saksharta Abhiyan",
+    "category": "Digital Services & IT",
+    "description": "Enroll for free digital literacy training under PMGDISHA for rural citizens to learn digital payments, internet services, and government e-services through authorised training centres.",
+    "url": "https://www.pmgdisha.in",
+    "ministry": "Ministry of Electronics & IT – CSC e-Governance",
+    "documents": [
+      "Aadhaar Card",
+      "Age Proof (14-60 years)",
+      "Address Proof (rural household)"
+    ],
+    "processing_time": "20 hours of training (flexible schedule)",
+    "fee": "Free",
+    "tags": [
+      "pmgdisha",
+      "digital literacy",
+      "rural digital",
+      "internet training",
+      "digital india",
+      "e-learning",
+      "csc",
+      "online banking training"
+    ]
+  },
+  {
+    "id": "139",
+    "service_name": "PMSSY – Super Specialty Hospitals Construction",
+    "category": "Health",
+    "description": "Track establishment of new AIIMS and upgrading of Government Medical College hospitals under Pradhan Mantri Swasthya Suraksha Yojana for tertiary healthcare access.",
+    "url": "https://pmssy-mohfw.nic.in",
+    "ministry": "Ministry of Health & Family Welfare",
+    "documents": [
+      "None required (information portal)"
+    ],
+    "processing_time": "Not applicable (hospital construction tracker)",
+    "fee": "Free",
+    "tags": [
+      "pmssy",
+      "aiims",
+      "super specialty hospital",
+      "government hospital",
+      "tertiary healthcare",
+      "medical college",
+      "health infrastructure"
+    ]
+  },
+  {
+    "id": "140",
+    "service_name": "SARFAESI – Debt Recovery & Asset Reconstruction",
+    "category": "Legal & Judiciary",
+    "description": "Banks and financial institutions can initiate recovery proceedings for secured loans under SARFAESI Act. Borrowers can access DRT (Debt Recovery Tribunal) services and auction notices.",
+    "url": "https://drt.gov.in",
+    "ministry": "Ministry of Finance – DRT",
+    "documents": [
+      "Loan Documents",
+      "Security Agreement / Mortgage Deed",
+      "Bank Notice under SARFAESI",
+      "Advocate Power of Attorney (for legal proceedings)"
+    ],
+    "processing_time": "6-24 months (DRT proceedings)",
+    "fee": "₹12,000-₹1,50,000 (varies by amount in dispute)",
+    "tags": [
+      "sarfaesi",
+      "drt",
+      "debt recovery",
+      "loan recovery",
+      "npa",
+      "asset reconstruction",
+      "secured loan",
+      "bank auction",
+      "ots"
+    ]
+  },
+  {
+    "id": "141",
+    "service_name": "CIN – Corporate Identification & MCA Filing Status",
+    "category": "Business & MSME",
+    "description": "Search and verify company details by CIN, check director history, view charge details, access annual filing compliance status, and download MCA documents.",
+    "url": "https://www.mca.gov.in",
+    "ministry": "Ministry of Corporate Affairs",
+    "documents": [
+      "CIN Number (for company search)",
+      "None required (for public search)"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free (basic search); ₹25-₹100 (document download)",
+    "tags": [
+      "cin",
+      "company search",
+      "mca",
+      "director search",
+      "company profile",
+      "roc",
+      "annual return",
+      "charges",
+      "corporate affairs"
+    ]
+  },
+  {
+    "id": "142",
+    "service_name": "PM KUSUM – Solar Pump & Grid Power for Farmers",
+    "category": "Energy",
+    "description": "Apply for standalone solar-powered agriculture pumps and solar power projects on barren land to generate income and reduce electricity cost for farmers under PM-KUSUM.",
+    "url": "https://mnre.gov.in",
+    "ministry": "Ministry of New & Renewable Energy",
+    "documents": [
+      "Aadhaar Card",
+      "Land Records",
+      "Bank Account Details",
+      "Electricity Connection Details",
+      "Bank Loan Documents (if availing subsidy-linked loan)"
+    ],
+    "processing_time": "30-90 days (application to installation)",
+    "fee": "10-30% of system cost (rest is subsidy/loan)",
+    "tags": [
+      "pm kusum",
+      "solar pump",
+      "solar agriculture",
+      "renewable energy",
+      "mnre",
+      "farm electrification",
+      "solar power",
+      "green energy",
+      "kusum scheme"
+    ]
+  },
+  {
+    "id": "143",
+    "service_name": "GeM Seller – MSE, SHG & Artisan Registration",
+    "category": "Business & MSME",
+    "description": "Register as an MSE, SHG, artisan, or weavers' cooperative on GeM to access government procurement with special preferences including purchase preference for MSEs and direct listing.",
+    "url": "https://gem.gov.in",
+    "ministry": "Ministry of Commerce & Industry – GeM",
+    "documents": [
+      "Udyam / SHG / Artisan Certificate",
+      "Aadhaar Card",
+      "PAN Card",
+      "GSTIN (if applicable)",
+      "Bank Account Details"
+    ],
+    "processing_time": "3-7 days",
+    "fee": "Free",
+    "tags": [
+      "gem",
+      "mse seller",
+      "shg gem",
+      "artisan",
+      "weavers",
+      "government procurement",
+      "handloom",
+      "handicraft",
+      "procurement portal"
+    ]
+  },
+  {
+    "id": "144",
+    "service_name": "PMSBY – Pradhan Mantri Suraksha Bima Yojana",
+    "category": "Banking & Finance",
+    "description": "Enroll in PMSBY for accidental death and disability insurance cover of ₹2 lakh at a premium of just ₹20 per year, available through banks to account holders aged 18-70.",
+    "url": "https://jansuraksha.gov.in",
+    "ministry": "Ministry of Finance – Department of Financial Services",
+    "documents": [
+      "Aadhaar Card",
+      "Savings Bank Account (auto-debit)"
+    ],
+    "processing_time": "Instant (enrollment through bank/online)",
+    "fee": "₹20 per year",
+    "tags": [
+      "pmsby",
+      "accident insurance",
+      "suraksha bima",
+      "jan suraksha",
+      "20 rupees insurance",
+      "death insurance",
+      "disability",
+      "banking insurance"
+    ]
+  },
+  {
+    "id": "145",
+    "service_name": "PMJJBY – Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "category": "Banking & Finance",
+    "description": "Enroll in PMJJBY for life insurance cover of ₹2 lakh at a premium of ₹436 per year, available through banks to account holders aged 18-50 with auto-debit from bank account.",
+    "url": "https://jansuraksha.gov.in",
+    "ministry": "Ministry of Finance – Department of Financial Services",
+    "documents": [
+      "Aadhaar Card",
+      "Savings Bank Account (for auto-debit)",
+      "Nominee Details"
+    ],
+    "processing_time": "Instant (enrollment through bank/online)",
+    "fee": "₹436 per year",
+    "tags": [
+      "pmjjby",
+      "life insurance",
+      "jeevan jyoti",
+      "jan suraksha",
+      "affordable insurance",
+      "2 lakh life cover",
+      "term insurance",
+      "bank life insurance"
+    ]
+  },
+  {
+    "id": "146",
+    "service_name": "PMAY-U Credit Linked Subsidy (CLSS)",
+    "category": "Housing & Urban Development",
+    "description": "Avail home loan interest subsidy under PMAY Credit Linked Subsidy Scheme (CLSS) for EWS (₹2.67 lakh), LIG (₹2.67 lakh), MIG-I (₹2.35 lakh), and MIG-II (₹2.30 lakh) categories.",
+    "url": "https://pmaymis.gov.in",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "documents": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Home Loan Sanction Letter",
+      "Property Documents",
+      "Bank Account Details"
+    ],
+    "processing_time": "30-90 days (subsidy disbursement)",
+    "fee": "Free",
+    "tags": [
+      "clss",
+      "home loan subsidy",
+      "pmay",
+      "ews",
+      "lig",
+      "mig",
+      "interest subsidy",
+      "affordable housing",
+      "housing finance",
+      "nha"
+    ]
+  },
+  {
+    "id": "147",
+    "service_name": "Aadhaar-Enabled Payment System (AePS)",
+    "category": "Banking & Finance",
+    "description": "Conduct banking transactions including cash withdrawal, balance enquiry, and Aadhaar-to-Aadhaar fund transfer using Aadhaar biometric authentication at Micro ATMs without debit card.",
+    "url": "https://www.npci.org.in",
+    "ministry": "Ministry of Finance – NPCI",
+    "documents": [
+      "Aadhaar Card (linked to bank account)",
+      "Biometric authentication (fingerprint)"
+    ],
+    "processing_time": "Instant",
+    "fee": "Free",
+    "tags": [
+      "aeps",
+      "aadhaar payment",
+      "micro atm",
+      "biometric withdrawal",
+      "fingerprint banking",
+      "npci",
+      "cash withdrawal",
+      "financial inclusion"
+    ]
+  },
+  {
+    "id": "148",
+    "service_name": "Digital India Land Records Modernisation (DILRMP)",
+    "category": "State Services",
+    "description": "Access digitized land records, view Khasra / Khatauni / Record of Rights (RoR), apply for mutation, and track land transactions through the state land record portals under DILRMP.",
+    "url": "https://dolr.gov.in",
+    "ministry": "Ministry of Rural Development – DOLR",
+    "documents": [
+      "Survey Number / Khasra Number",
+      "Aadhaar Card (for mutation applications)",
+      "Previous RoR Copy"
+    ],
+    "processing_time": "Instant (viewing); 15-60 days (mutation)",
+    "fee": "Free (viewing); ₹50-₹200 (mutation)",
+    "tags": [
+      "land records",
+      "khasra",
+      "khatauni",
+      "ror",
+      "bhulekh",
+      "mutation",
+      "land ownership",
+      "dilrmp",
+      "bhu naksha",
+      "registry"
+    ]
+  },
+  {
+    "id": "149",
+    "service_name": "Property Registration – E-Registration (IGRS)",
+    "category": "State Services",
+    "description": "Register property sale deeds, gift deeds, lease agreements, and other documents at Sub-Registrar offices through state e-Registration portals with online appointment booking.",
+    "url": "https://services.india.gov.in",
+    "ministry": "State Registration & Stamps Department (IGRS)",
+    "documents": [
+      "Sale Deed / Agreement for Sale",
+      "Title Documents of Property",
+      "Aadhaar Cards of Buyer and Seller",
+      "PAN Cards (for transactions above ₹50 lakh)",
+      "Encumbrance Certificate"
+    ],
+    "processing_time": "Same day to 3 days",
+    "fee": "Stamp duty: 4-8% of property value (varies by state); Registration: 1%",
+    "tags": [
+      "property registration",
+      "sale deed",
+      "stamp duty",
+      "igrs",
+      "sub registrar",
+      "encumbrance certificate",
+      "gift deed",
+      "lease",
+      "real estate"
+    ]
+  },
+  {
+    "id": "150",
+    "service_name": "e-District Services – State Government Integrated Portal",
+    "category": "State Services",
+    "description": "Apply online for 100+ state government services including income, caste, domicile, OBC certificates, ration card, and other state-issued documents through the e-District platform.",
+    "url": "https://edistrict.gov.in",
+    "ministry": "Ministry of Electronics & IT – State Governments",
+    "documents": [
+      "Aadhaar Card",
+      "Service-specific documents (varies per application)",
+      "Passport-size Photograph"
+    ],
+    "processing_time": "7-30 days (varies by service and state)",
+    "fee": "₹10-₹200 (varies by state and service)",
+    "tags": [
+      "e-district",
+      "state services",
+      "online certificate",
+      "caste",
+      "income",
+      "domicile",
+      "ration card",
+      "single window",
+      "government portal"
+    ]
+  }
+]
