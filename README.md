@@ -1,4 +1,4 @@
-# 🇮🇳 GovSaathi — AI Government Service Finder
+# 🇮🇳 BHARATSERVICE — AI Government Service Finder
 
 A production-ready SaaS platform for discovering and navigating Indian government services using AI-powered semantic search and an intelligent chat assistant.
 
