@@ -16,9 +16,9 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 echo ""
-echo -e "${CYAN}╔══════════════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║   AI Government Service Finder — GovSaathi   ║${NC}"
-echo -e "${CYAN}╚══════════════════════════════════════════════╝${NC}"
+echo -e "${CYAN}╔═════════════════════════════════════════════════╗${NC}"
+echo -e "${CYAN}║   AI Government Service Finder — BHARATSERVICE  ║${NC}"
+echo -e "${CYAN}╚═════════════════════════════════════════════════╝${NC}"
 echo ""
 
 # ── Check Python ───────────────────────────────────────
